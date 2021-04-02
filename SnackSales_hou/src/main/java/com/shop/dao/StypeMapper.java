@@ -22,6 +22,7 @@ public interface StypeMapper {
 
     int insertSelective(Stype record);
 
+
     @Select({
         "select",
         "stype_id, stype_name, btype_id",
