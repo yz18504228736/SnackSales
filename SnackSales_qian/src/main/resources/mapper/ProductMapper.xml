@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.ProductMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Product">
+    <id column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_pro" jdbcType="VARCHAR" property="productPro" />
+    <result column="product_brand" jdbcType="VARCHAR" property="productBrand" />
+    <result column="product_num" jdbcType="INTEGER" property="productNum" />
+    <result column="product_from" jdbcType="VARCHAR" property="productFrom" />
+    <result column="product_price" jdbcType="DOUBLE" property="productPrice" />
+    <result column="product_time" jdbcType="TIMESTAMP" property="productTime" />
+    <result column="product_desc" jdbcType="VARCHAR" property="productDesc" />
+    <result column="product_state" jdbcType="VARCHAR" property="productState" />
+    <association property="stype" column="stype_id" javaType="com.shop.entity.Stype" select="com.shop.dao.StypeMapper.selectByPrimaryKey" fetchType="lazy"></association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    product_id, stype_id, product_name, product_pro, product_brand, product_num, product_from, 
+    product_price, product_time, product_desc, product_state
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.Product" useGeneratedKeys="true" keyProperty="productId">
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        stype_id,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="productPro != null">
+        product_pro,
+      </if>
+      <if test="productBrand != null">
+        product_brand,
+      </if>
+      <if test="productNum != null">
+        product_num,
+      </if>
+      <if test="productFrom != null">
+        product_from,
+      </if>
+      <if test="productPrice != null">
+        product_price,
+      </if>
+      <if test="productTime != null">
+        product_time,
+      </if>
+      <if test="productDesc != null">
+        product_desc,
+      </if>
+      <if test="productState != null">
+        product_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        #{stype.stypeId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productPro != null">
+        #{productPro,jdbcType=VARCHAR},
+      </if>
+      <if test="productBrand != null">
+        #{productBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="productNum != null">
+        #{productNum,jdbcType=INTEGER},
+      </if>
+      <if test="productFrom != null">
+        #{productFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null">
+        #{productPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="productTime != null">
+        #{productTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productDesc != null">
+        #{productDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="productState != null">
+        #{productState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Product">
+    update product
+    <set>
+      <if test="stype != null and stype.stypeId != null">
+        stype_id = #{stype.stypeId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productPro != null">
+        product_pro = #{productPro,jdbcType=VARCHAR},
+      </if>
+      <if test="productBrand != null">
+        product_brand = #{productBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="productNum != null">
+        product_num = #{productNum,jdbcType=INTEGER},
+      </if>
+      <if test="productFrom != null">
+        product_from = #{productFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null">
+        product_price = #{productPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="productTime != null">
+        product_time = #{productTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productDesc != null">
+        product_desc = #{productDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="productState != null">
+        product_state = #{productState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where product_id = #{productId,jdbcType=INTEGER}
+  </update>
+</mapper>

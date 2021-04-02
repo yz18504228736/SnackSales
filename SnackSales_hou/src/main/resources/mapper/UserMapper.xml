@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.User">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_truename" jdbcType="VARCHAR" property="userTruename" />
+    <result column="user_sex" jdbcType="CHAR" property="userSex" />
+    <result column="user_img" jdbcType="VARCHAR" property="userImg" />
+    <result column="user_birth" jdbcType="TIMESTAMP" property="userBirth" />
+    <result column="user_mail" jdbcType="VARCHAR" property="userMail" />
+    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+    <result column="user_tel" jdbcType="VARCHAR" property="userTel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, user_name, user_truename, user_sex, user_img, user_birth, user_mail, user_pwd, 
+    user_tel
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userTruename != null">
+        user_truename,
+      </if>
+      <if test="userSex != null">
+        user_sex,
+      </if>
+      <if test="userImg != null">
+        user_img,
+      </if>
+      <if test="userBirth != null">
+        user_birth,
+      </if>
+      <if test="userMail != null">
+        user_mail,
+      </if>
+      <if test="userPwd != null">
+        user_pwd,
+      </if>
+      <if test="userTel != null">
+        user_tel,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userTruename != null">
+        #{userTruename,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        #{userSex,jdbcType=CHAR},
+      </if>
+      <if test="userImg != null">
+        #{userImg,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirth != null">
+        #{userBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userMail != null">
+        #{userMail,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userTel != null">
+        #{userTel,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.User">
+    update user
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userTruename != null">
+        user_truename = #{userTruename,jdbcType=VARCHAR},
+      </if>
+      <if test="userSex != null">
+        user_sex = #{userSex,jdbcType=CHAR},
+      </if>
+      <if test="userImg != null">
+        user_img = #{userImg,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirth != null">
+        user_birth = #{userBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userMail != null">
+        user_mail = #{userMail,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        user_pwd = #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userTel != null">
+        user_tel = #{userTel,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+</mapper>

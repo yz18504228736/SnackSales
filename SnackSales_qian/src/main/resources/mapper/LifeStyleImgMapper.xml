@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.LifeStyleImgMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.LifeStyleImg">
+    <id column="lifestyle_img_id" jdbcType="INTEGER" property="lifestyleImgId" />
+    <result column="lifestyle_img_name" jdbcType="VARCHAR" property="lifestyleImgName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    lifestyle_img_id, lifestyle_img_name
+  </sql>
+</mapper>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.BtypeImgMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.BtypeImg">
+    <id column="btype_img_id" jdbcType="INTEGER" property="btypeImgId" />
+    <result column="btype_id" jdbcType="INTEGER" property="btypeId" />
+    <result column="btype_name" jdbcType="VARCHAR" property="btypeName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    btype_img_id, btype_id, btype_name
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.BtypeImg">
+    insert into btype_img
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="btypeImgId != null">
+        btype_img_id,
+      </if>
+      <if test="btypeId != null">
+        btype_id,
+      </if>
+      <if test="btypeName != null">
+        btype_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="btypeImgId != null">
+        #{btypeImgId,jdbcType=INTEGER},
+      </if>
+      <if test="btypeId != null">
+        #{btypeId,jdbcType=INTEGER},
+      </if>
+      <if test="btypeName != null">
+        #{btypeName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.BtypeImg">
+    update btype_img
+    <set>
+      <if test="btypeId != null">
+        btype_id = #{btypeId,jdbcType=INTEGER},
+      </if>
+      <if test="btypeName != null">
+        btype_name = #{btypeName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where btype_img_id = #{btypeImgId,jdbcType=INTEGER}
+  </update>
+</mapper>

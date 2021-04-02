@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.FavoriteMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Favorite">
+    <id column="favorite_id" jdbcType="INTEGER" property="favoriteId" />
+    <!--<result column="user_id" jdbcType="INTEGER" property="userId" />-->
+    <result column="favorite_pro_price" jdbcType="DECIMAL" property="favoriteProPrice" />
+    <result column="favorite_pro_name" jdbcType="VARCHAR" property="favoriteProName" />
+    <result column="favorite_pro_size" jdbcType="VARCHAR" property="favoriteProSize" />
+    <result column="favorite_pro_img" jdbcType="VARCHAR" property="favoriteProImg" />
+    <association property="user" column="user_id" javaType="com.shop.entity.User" select="com.shop.dao.UserMapper.selectByUserId" fetchType="lazy"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    favorite_id, user_id, favorite_pro_price, favorite_pro_name, favorite_pro_size, favorite_pro_img
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.Favorite">
+    insert into favorite
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="favoriteId != null">
+        favorite_id,
+      </if>
+      <if test="user!=null and user.userId != null">
+        user_id,
+      </if>
+      <if test="favoriteProPrice != null">
+        favorite_pro_price,
+      </if>
+      <if test="favoriteProName != null">
+        favorite_pro_name,
+      </if>
+      <if test="favoriteProSize != null">
+        favorite_pro_size,
+      </if>
+      <if test="favoriteProImg != null">
+        favorite_pro_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="favoriteId != null">
+        #{favoriteId,jdbcType=INTEGER},
+      </if>
+      <if test="user!=null and user.userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="favoriteProPrice != null">
+        #{favoriteProPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="favoriteProName != null">
+        #{favoriteProName,jdbcType=VARCHAR},
+      </if>
+      <if test="favoriteProSize != null">
+        #{favoriteProSize,jdbcType=VARCHAR},
+      </if>
+      <if test="favoriteProImg != null">
+        #{favoriteProImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Favorite">
+    update favorite
+    <set>
+      <if test="user!=null and user.userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="favoriteProPrice != null">
+        favorite_pro_price = #{favoriteProPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="favoriteProName != null">
+        favorite_pro_name = #{favoriteProName,jdbcType=VARCHAR},
+      </if>
+      <if test="favoriteProSize != null">
+        favorite_pro_size = #{favoriteProSize,jdbcType=VARCHAR},
+      </if>
+      <if test="favoriteProImg != null">
+        favorite_pro_img = #{favoriteProImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where favorite_id = #{favoriteId,jdbcType=INTEGER}
+  </update>
+</mapper>

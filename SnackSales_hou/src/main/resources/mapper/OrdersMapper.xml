@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.OrdersMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Orders">
+    <id column="order_id" jdbcType="INTEGER" property="orderId" />
+    <!--<result column="user_id" jdbcType="INTEGER" property="userId" />-->
+    <!--<result column="order_state_id" jdbcType="INTEGER" property="orderStateId" />-->
+    <result column="order_pro_num" jdbcType="INTEGER" property="orderProNum" />
+    <result column="order_pro_price" jdbcType="DECIMAL" property="orderProPrice" />
+    <result column="order_name" jdbcType="VARCHAR" property="orderName" />
+    <result column="order_time" jdbcType="TIMESTAMP" property="orderTime" />
+    <result column="order_pro_name" jdbcType="VARCHAR" property="orderProName" />
+    <result column="order_pro_size" jdbcType="VARCHAR" property="orderProSize" />
+    <result column="order_pro_img" jdbcType="VARCHAR" property="orderProImg" />
+    <result column="receiver_name" jdbcType="VARCHAR" property="receiverName" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="phonenum" jdbcType="VARCHAR" property="phonenum" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
+    <result column="sendtime" jdbcType="TIMESTAMP" property="sendtime" />
+    <result column="receivetime" jdbcType="VARCHAR" property="receivetime" />
+    <association property="user" column="user_id" javaType="com.shop.entity.User" select="com.shop.dao.UserMapper.selectByUserId" fetchType="lazy"/>
+    <association property="orderState" column="order_state_id" javaType="com.shop.entity.OrderState" select="com.shop.dao.OrderStateMapper.selectByPrimaryKey" fetchType="lazy"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    order_id, user_id, order_state_id, order_pro_num, order_pro_price, order_name, order_time, 
+    order_pro_name, order_pro_size, order_pro_img, receiver_name, address, phonenum, 
+    fee, sendtime, receivetime
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.Orders">
+    insert into orders
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="user!=null and user.userId != null">
+        user_id,
+      </if>
+      <if test="orderState!=null and orderState.orderStateId != null">
+        order_state_id,
+      </if>
+      <if test="orderProNum != null">
+        order_pro_num,
+      </if>
+      <if test="orderProPrice != null">
+        order_pro_price,
+      </if>
+      <if test="orderName != null">
+        order_name,
+      </if>
+      <if test="orderTime != null">
+        order_time,
+      </if>
+      <if test="orderProName != null">
+        order_pro_name,
+      </if>
+      <if test="orderProSize != null">
+        order_pro_size,
+      </if>
+      <if test="orderProImg != null">
+        order_pro_img,
+      </if>
+      <if test="receiverName != null">
+        receiver_name,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="phonenum != null">
+        phonenum,
+      </if>
+      <if test="fee != null">
+        fee,
+      </if>
+      <if test="sendtime != null">
+        sendtime,
+      </if>
+      <if test="receivetime != null">
+        receivetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="user!=null and user.userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="orderState!=null and orderState.orderStateId != null">
+        #{orderStateId,jdbcType=INTEGER},
+      </if>
+      <if test="orderProNum != null">
+        #{orderProNum,jdbcType=INTEGER},
+      </if>
+      <if test="orderProPrice != null">
+        #{orderProPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="orderName != null">
+        #{orderName,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        #{orderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderProName != null">
+        #{orderProName,jdbcType=VARCHAR},
+      </if>
+      <if test="orderProSize != null">
+        #{orderProSize,jdbcType=VARCHAR},
+      </if>
+      <if test="orderProImg != null">
+        #{orderProImg,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverName != null">
+        #{receiverName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenum != null">
+        #{phonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="fee != null">
+        #{fee,jdbcType=DECIMAL},
+      </if>
+      <if test="sendtime != null">
+        #{sendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="receivetime != null">
+        #{receivetime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Orders">
+    update orders
+    <set>
+      <if test="user!=null and user.userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="orderState!=null and orderState.orderStateId != null">
+        order_state_id = #{orderStateId,jdbcType=INTEGER},
+      </if>
+      <if test="orderProNum != null">
+        order_pro_num = #{orderProNum,jdbcType=INTEGER},
+      </if>
+      <if test="orderProPrice != null">
+        order_pro_price = #{orderProPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="orderName != null">
+        order_name = #{orderName,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        order_time = #{orderTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderProName != null">
+        order_pro_name = #{orderProName,jdbcType=VARCHAR},
+      </if>
+      <if test="orderProSize != null">
+        order_pro_size = #{orderProSize,jdbcType=VARCHAR},
+      </if>
+      <if test="orderProImg != null">
+        order_pro_img = #{orderProImg,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverName != null">
+        receiver_name = #{receiverName,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenum != null">
+        phonenum = #{phonenum,jdbcType=VARCHAR},
+      </if>
+      <if test="fee != null">
+        fee = #{fee,jdbcType=DECIMAL},
+      </if>
+      <if test="sendtime != null">
+        sendtime = #{sendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="receivetime != null">
+        receivetime = #{receivetime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where order_id = #{orderId,jdbcType=INTEGER}
+  </update>
+</mapper>

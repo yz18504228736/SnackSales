@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.ShoppingCarMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.ShoppingCar">
+    <id column="shoppingcart_id" jdbcType="INTEGER" property="shoppingcartId" />
+    <!--<result column="user_id" jdbcType="INTEGER" property="userId" />-->
+    <result column="shoppingcart_pro_num" jdbcType="INTEGER" property="shoppingcartProNum" />
+    <result column="shoppingcart_pro_price" jdbcType="DECIMAL" property="shoppingcartProPrice" />
+    <result column="shoppingcart_pro_name" jdbcType="VARCHAR" property="shoppingcartProName" />
+    <result column="shoppingcart_pro_size" jdbcType="VARCHAR" property="shoppingcartProSize" />
+    <result column="shoppingcart_pro_img" jdbcType="VARCHAR" property="shoppingcartProImg" />
+    <association property="user" column="user_id" javaType="com.shop.entity.User" select="com.shop.dao.UserMapper.selectByUserId" fetchType="lazy"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    shoppingcart_id, user_id, shoppingcart_pro_num, shoppingcart_pro_price, shoppingcart_pro_name, 
+    shoppingcart_pro_size, shoppingcart_pro_img
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.ShoppingCar">
+    insert into shoppingcar
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="shoppingcartId != null">
+        shoppingcart_id,
+      </if>
+      <if test="user!=null and user.userId != null">
+        user_id,
+      </if>
+      <if test="shoppingcartProNum != null">
+        shoppingcart_pro_num,
+      </if>
+      <if test="shoppingcartProPrice != null">
+        shoppingcart_pro_price,
+      </if>
+      <if test="shoppingcartProName != null">
+        shoppingcart_pro_name,
+      </if>
+      <if test="shoppingcartProSize != null">
+        shoppingcart_pro_size,
+      </if>
+      <if test="shoppingcartProImg != null">
+        shoppingcart_pro_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="shoppingcartId != null">
+        #{shoppingcartId,jdbcType=INTEGER},
+      </if>
+      <if test="user!=null and user.userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="shoppingcartProNum != null">
+        #{shoppingcartProNum,jdbcType=INTEGER},
+      </if>
+      <if test="shoppingcartProPrice != null">
+        #{shoppingcartProPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="shoppingcartProName != null">
+        #{shoppingcartProName,jdbcType=VARCHAR},
+      </if>
+      <if test="shoppingcartProSize != null">
+        #{shoppingcartProSize,jdbcType=VARCHAR},
+      </if>
+      <if test="shoppingcartProImg != null">
+        #{shoppingcartProImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.ShoppingCar">
+    update shoppingcar
+    <set>
+      <if test="user!=null and user.userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="shoppingcartProNum != null">
+        shoppingcart_pro_num = #{shoppingcartProNum,jdbcType=INTEGER},
+      </if>
+      <if test="shoppingcartProPrice != null">
+        shoppingcart_pro_price = #{shoppingcartProPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="shoppingcartProName != null">
+        shoppingcart_pro_name = #{shoppingcartProName,jdbcType=VARCHAR},
+      </if>
+      <if test="shoppingcartProSize != null">
+        shoppingcart_pro_size = #{shoppingcartProSize,jdbcType=VARCHAR},
+      </if>
+      <if test="shoppingcartProImg != null">
+        shoppingcart_pro_img = #{shoppingcartProImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where shoppingcart_id = #{shoppingcartId,jdbcType=INTEGER}
+  </update>
+</mapper>

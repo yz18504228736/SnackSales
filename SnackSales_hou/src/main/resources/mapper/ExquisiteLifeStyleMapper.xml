@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.ExquisiteLifeStyleMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.ExquisiteLifeStyle">
+    <id column="lifestyle_id" jdbcType="INTEGER" property="lifestyleId" />
+    <result column="lifestyle_img_id" jdbcType="INTEGER" property="lifestyleImgId" />
+
+    <association property="specialType" column="special_type_id" select="com.shop.dao.SpecialTypeMapper.selectByPrimaryKey" javaType="com.shop.entity.SpecialType"></association>
+    <association property="stype" column="stype_id" select="com.shop.dao.StypeMapper.selectByPrimaryKey" javaType="com.shop.entity.Stype"></association>
+    <association property="product" column="product_id" select="com.shop.dao.ProductMapper.selectByPrimaryKey" javaType="com.shop.entity.Product"></association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    lifestyle_id, special_type_id, stype_id, product_id, lifestyle_img_id
+  </sql>
+
+  <select id="findCount" resultType="java.lang.Long">
+    select count(lifestyle_id) from exquisite_lifestyle
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from exquisite_lifestyle
+    limit #{firstResult}, #{maxResults}
+  </select>
+
+  <insert id="insertSelective" parameterType="com.shop.entity.ExquisiteLifeStyle">
+    insert into exquisite_lifestyle
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="lifestyleId != null">
+        lifestyle_id,
+      </if>
+      <if test="specialType != null and specialType.specialTypeId != null">
+        special_type_id,
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        stype_id,
+      </if>
+      <if test="product != null and product.productId != null">
+        product_id,
+      </if>
+      <if test="lifestyleImgId != null">
+        lifestyle_img_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="lifestyleId != null">
+        #{lifestyleId,jdbcType=INTEGER},
+      </if>
+      <if test="specialType != null and specialType.specialTypeId != null">
+        #{specialType.specialTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        #{product.stype.stypeId,jdbcType=INTEGER},
+      </if>
+      <if test="product != null and product.productId != null">
+        #{product.productId,jdbcType=INTEGER},
+      </if>
+      <if test="lifestyleImgId != null">
+        #{lifestyleImgId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.ExquisiteLifeStyle">
+    update exquisite_lifestyle
+    <set>
+      <if test="specialType != null and specialType.specialTypeId != null">
+        special_type_id = #{specialType.specialTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        stype_id = #{product.stype.stypeId,jdbcType=INTEGER},
+      </if>
+      <if test="product != null and product.productId != null">
+        product_id = #{product.productId,jdbcType=INTEGER},
+      </if>
+      <if test="lifestyleImgId != null">
+        lifestyle_img_id = #{lifestyleImgId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where lifestyle_id = #{lifestyleId,jdbcType=INTEGER}
+  </update>
+</mapper>

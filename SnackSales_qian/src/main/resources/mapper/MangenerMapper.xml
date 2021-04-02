@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.MangenerMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Mangener">
+    <id column="mangener_id" jdbcType="INTEGER" property="mangenerId" />
+    <result column="man_name" jdbcType="VARCHAR" property="manName" />
+    <result column="man_pwd" jdbcType="VARCHAR" property="manPwd" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mangener_id, man_name, man_pwd
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.Mangener">
+    insert into mangener
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mangenerId != null">
+        mangener_id,
+      </if>
+      <if test="manName != null">
+        man_name,
+      </if>
+      <if test="manPwd != null">
+        man_pwd,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mangenerId != null">
+        #{mangenerId,jdbcType=INTEGER},
+      </if>
+      <if test="manName != null">
+        #{manName,jdbcType=VARCHAR},
+      </if>
+      <if test="manPwd != null">
+        #{manPwd,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Mangener">
+    update mangener
+    <set>
+      <if test="manName != null">
+        man_name = #{manName,jdbcType=VARCHAR},
+      </if>
+      <if test="manPwd != null">
+        man_pwd = #{manPwd,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mangener_id = #{mangenerId,jdbcType=INTEGER}
+  </update>
+</mapper>

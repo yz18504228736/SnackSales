@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.SendinforMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Sendinfor">
+    <id column="info_id" jdbcType="INTEGER" property="infoId" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
+    <result column="send_time" jdbcType="VARCHAR" property="sendTime" />
+    <result column="receive_time" jdbcType="DATE" property="receiveTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    info_id, fee, send_time, receive_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.Sendinfor">
+    insert into sendinfor
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="infoId != null">
+        info_id,
+      </if>
+      <if test="fee != null">
+        fee,
+      </if>
+      <if test="sendTime != null">
+        send_time,
+      </if>
+      <if test="receiveTime != null">
+        receive_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="infoId != null">
+        #{infoId,jdbcType=INTEGER},
+      </if>
+      <if test="fee != null">
+        #{fee,jdbcType=DECIMAL},
+      </if>
+      <if test="sendTime != null">
+        #{sendTime,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveTime != null">
+        #{receiveTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Sendinfor">
+    update sendinfor
+    <set>
+      <if test="fee != null">
+        fee = #{fee,jdbcType=DECIMAL},
+      </if>
+      <if test="sendTime != null">
+        send_time = #{sendTime,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveTime != null">
+        receive_time = #{receiveTime,jdbcType=DATE},
+      </if>
+    </set>
+    where info_id = #{infoId,jdbcType=INTEGER}
+  </update>
+</mapper>

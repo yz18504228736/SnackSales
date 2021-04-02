@@ -1,0 +1,72 @@
+﻿$(function () {
+    //弹框
+    $('.popout a').click(function () {
+        $(this).parents('.popout').css('display', 'none');
+    });
+    $('.popup .close').click(function () {
+        $(this).parents('.popup').css('display', 'none');
+    });
+    $('.popup3 .txt4').click(function () {
+        $(this).find('i').addClass('active');
+        $(this).siblings('.txt4').find('i').removeClass('active');
+    });
+    
+});
+
+function refund(orderid) {
+$("#step1").click(function () {
+    $(".popup1").hide();
+    util.Ajax.get('../OrderRefund/RefundBefore', { orderid: orderid }, function (data) {
+        var _orderRefundInfo = data.result;
+        $(".popup3 .refundbeforeinfo").empty();
+        //$("#OrderRefundBefore").tmpl(_orderRefundInfo).prependTo(".popup3 .refundbeforeinfo");
+        $(".popup3 .refundbeforeinfo").utastebars({
+            tpl: $("#OrderRefundBefore"),
+            context: _orderRefundInfo,
+            emptytext: ""
+        });
+        $(".popup3").show();
+    });
+})
+
+$("#step2").one('click', function () {
+    var reasonSelect = $("#refundreason").find("option:selected");
+    var refundReason = reasonSelect.val();
+    var iactive = $('.popup3 ').find('.active');
+    var refundType = iactive.attr("title");
+    if (refundType == ""||refundType == undefined)
+    {
+        refundType = 2;
+    }
+    util.Ajax.get('../OrderRefund/CreateRefund', { orderid: orderid, refundType: refundType, refundReason: refundReason }, function (result) {
+        if (result.IsSuccess == true)
+        {
+            util.Ajax.get('../OrderRefund/GetRefund', { orderid: orderid }, function (data) {
+                var _orderRefundInfo = data.result;
+                $(".refundstateinfo").empty();
+                $(".popup4 table").empty();
+                //$("#OrderRefundState_Info").tmpl(_orderRefundInfo).prependTo(".refundstateinfo");
+                //$("#RefundAmunt_Info").tmpl(_orderRefundInfo).prependTo(".popup4 table");
+                $(".refundstateinfo").utastebars({
+                    tpl: $("#OrderRefundState_Info"),
+                    context: _orderRefundInfo,
+                    emptytext: ""
+                });
+                $(".popup4 table").utastebars({
+                    tpl: $("#RefundAmunt_Info"),
+                    context: _orderRefundInfo,
+                    emptytext: ""
+                });
+                $(".popup3").hide();
+                $(".popup4").show();
+            });
+           
+         }else{
+            util.Dialog.alert("申请失败");
+        }
+
+    });
+})
+
+
+}

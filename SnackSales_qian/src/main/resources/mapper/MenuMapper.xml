@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.MenuMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Menu">
+    <id column="menu_id" jdbcType="INTEGER" property="menuId" />
+
+    <result column="menu_desc" jdbcType="VARCHAR" property="menuDesc" />
+    <result column="menu_name" jdbcType="VARCHAR" property="menuName" />
+    <result column="menu_content" jdbcType="VARCHAR" property="menuContent" />
+    <result column="menu_img" jdbcType="VARCHAR" property="menuImg" />
+
+    <association property="menutype" column="menu_type_id" select="com.shop.dao.MenutypeMapper.selectByPrimaryKey" javaType="com.shop.entity.Menutype"></association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    menu_id, menu_type_id, menu_desc, menu_name, menu_content, menu_img
+  </sql>
+
+  <select id="findCount" resultType="java.lang.Long">
+    select count(menu_id) from menu
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from menu
+    limit #{firstResult}, #{maxResults}
+  </select>
+
+  <insert id="insertSelective" parameterType="com.shop.entity.Menu">
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="menuId != null">
+        menu_id,
+      </if>
+      <if test="menutype != null and menutype.menuTypeId">
+        menu_type_id,
+      </if>
+      <if test="menuDesc != null">
+        menu_desc,
+      </if>
+      <if test="menuName != null">
+        menu_name,
+      </if>
+      <if test="menuContent != null">
+        menu_content,
+      </if>
+      <if test="menuImg != null">
+        menu_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="menuId != null">
+        #{menuId,jdbcType=INTEGER},
+      </if>
+      <if test="menutype != null and menutype.menuTypeId">
+        #{menutype.menuTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="menuDesc != null">
+        #{menuDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="menuName != null">
+        #{menuName,jdbcType=VARCHAR},
+      </if>
+      <if test="menuContent != null">
+        #{menuContent,jdbcType=VARCHAR},
+      </if>
+      <if test="menuImg != null">
+        #{menuImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Menu">
+    update menu
+    <set>
+      <if test="menutype != null and menutype.menuTypeId">
+        menu_type_id = #{menutype.menuTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="menuDesc != null">
+        menu_desc = #{menuDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="menuName != null">
+        menu_name = #{menuName,jdbcType=VARCHAR},
+      </if>
+      <if test="menuContent != null">
+        menu_content = #{menuContent,jdbcType=VARCHAR},
+      </if>
+      <if test="menuImg != null">
+        menu_img = #{menuImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where menu_id = #{menuId,jdbcType=INTEGER}
+  </update>
+</mapper>

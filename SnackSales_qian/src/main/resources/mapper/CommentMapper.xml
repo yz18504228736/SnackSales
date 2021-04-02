@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.Comment">
+    <id column="comment_id" jdbcType="INTEGER" property="commentId" />
+    <!--<result column="user_id" jdbcType="INTEGER" property="userId" />-->
+    <!--<result column="product_id" jdbcType="INTEGER" property="productId" />-->
+    <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
+    <result column="comment_grade" jdbcType="INTEGER" property="commentGrade" />
+    <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
+    <association property="user" column="user_id" javaType="com.shop.entity.User" select="com.shop.dao.UserMapper.selectByUserId" fetchType="lazy"/>
+    <association property="product" column="product_id"  javaType="com.shop.entity.Product" fetchType="lazy" select="com.shop.dao.ProductMapper.selectByPrimaryKey"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    comment_id, user_id, product_id, comment_content, comment_grade, comment_time
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.Comment">
+    insert into comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="commentId != null">
+        comment_id,
+      </if>
+      <if test="user != null and user.userId != null">
+        user_id,
+      </if>
+      <if test="product != null and product.productId !=null">
+        product_id,
+      </if>
+      <if test="commentContent != null">
+        comment_content,
+      </if>
+      <if test="commentGrade != null">
+        comment_grade,
+      </if>
+      <if test="commentTime != null">
+        comment_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="commentId != null">
+        #{commentId,jdbcType=INTEGER},
+      </if>
+      <if test="user != null and user.userId != null">
+        #{user.userId,jdbcType=INTEGER},
+      </if>
+      <if test="product != null and product.productId !=null">
+        #{product.productId,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null">
+        #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="commentGrade != null">
+        #{commentGrade,jdbcType=INTEGER},
+      </if>
+      <if test="commentTime != null">
+        #{commentTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.Comment">
+    update comment
+    <set>
+      <if test="user != null and user.userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="product != null and product.productId !=null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null">
+        comment_content = #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="commentGrade != null">
+        comment_grade = #{commentGrade,jdbcType=INTEGER},
+      </if>
+      <if test="commentTime != null">
+        comment_time = #{commentTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where comment_id = #{commentId,jdbcType=INTEGER}
+  </update>
+</mapper>

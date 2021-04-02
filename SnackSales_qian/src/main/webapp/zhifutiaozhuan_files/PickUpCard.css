@@ -1,0 +1,139 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.PickUpCard { width: 942px; padding: 20px; border: 1px solid #e3e6e0; background: #fff; }
+
+.PickUpCard .PUCard{ width:600px; height:150px; margin:20px 0; padding:20px 0 0 100px; background:url(../images/PickUpCard.png) no-repeat 0 0;}
+.PickUpCard .PUCard h4{ font-size:14px; font-weight:normal; margin-bottom:10px;}
+.PickUpCard .PUCard dl{ clear:both; padding:6px 0;zoom:1;}
+.PickUpCard .PUCard dl:after, .PickUpCard .PUCard dl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.PickUpCard .PUCard dt{ float:left; vertical-align:middle; width:85px; height:22px; line-height:22px; padding-right:5px; text-align:right;}
+.PickUpCard .PUCard dd{ float:left;}
+.PickUpCard .PUCard input{ width:300px; height:20px; line-height:20px; border:1px solid #ddd}
+.PickUpCard .PUCard span{ margin-left:10px; color:#e8380d;}
+.PickUpCard .PUCard .btn-gn{ width:95px; height:25px; line-height:25px; text-align:center; font-size:14px}
+.PickUpCard .PUCard .help{ margin-left:150px; color:#ef760a; text-decoration:underline;}
+.PickUpCard .select div{ float:right; margin-left:10px;}
+.PickUpCard .myyg-table{ margin-bottom:40px;}
+
+
+.steps{ float:right; padding-top:20px; margin-right:40px;}
+.steps li{position:relative; float:left;}
+.steps li b{background:url(../images/order-step.png) no-repeat; width:36px; height:36px; display:block; float:left;}
+.steps li .b1{ background-position:0 0}
+.steps li .b2{ background-position:-42px 0}
+.steps li .b3{ background-position:-84px 0}
+.steps li i{width:165px; height:6px; background:#fff; border:1px solid #e5e5e5; border-width:1px 0; display:block; float:left; margin-top:15px; margin-right:0; overflow:hidden;}
+.steps li span{position:absolute; top:-20px; right:0; display:inline-block; width:160px; text-align:center; right:-62px; color:#333}
+.steps .on span{ color:#008842;}
+.steps .on i{ border-color:#008842; background:#008842;}
+.steps .on .b1{ background-position:0 -44px;}
+.steps .on .b2{ background-position:-42px -44px;}
+.steps .on .b3{ background-position:-84px -44px;}
+
+.w1200 { width: 1200px !important; margin:0 !important; padding:0 !important; border-top:none;}
+.PickUpCard .p-title{ line-height:40px; border-bottom:2px solid #008842;}
+.PickUpCard .p-title .t{ float:left; width:171px; height:40px; padding-left:45px; font: normal 18px/40px Microsoft YaHei; color:#fff; background:url(../images/PickUpCard.png) no-repeat 0 -180px;}
+.PickUpCard .p-title span{ padding-left:20px;}
+.PickUpCard .p-title b{ color:#008842;}
+
+.PickUpCard-list{}
+.PickUpCard-list li{ position:relative; float:left; overflow:hidden; width:256px; height:360px; margin:20px; _margin:15px; border:2px solid #fff; background:#f5f5f5;}
+.PickUpCard-list li a{ display:block; text-align:center; margin-bottom:15px;}
+.PickUpCard-list li .btn-gn{ width:116px; height:26px; line-height:26px; text-align:center; font-size:14px; margin:25px auto 0 auto;}
+.PickUpCard-list li i{ display:none; position:absolute; right:0; top:0; width:40px; height:40px; background:url(../images/PickUpCard.png) no-repeat -233px -180px}
+.PickUpCard-list .hover{ border:2px solid #008842;}
+.PickUpCard-list .cur{ border:2px solid #008842;}
+.PickUpCard-list .cur i{ display:block;}
+.PickUpCard-list .cur .btn-gn{ color:#008842; background:#f5f5f5;}
+.PickUpCard-list .settle{ clear:both; height:40px; line-height:40px; margin:40px 20px 20px 20px; padding:20px; background:#f7f7f7;}
+.PickUpCard-list .settle b{ color:#008842;}
+.PickUpCard-list .left{ float:left;}
+.PickUpCard-list .right{ float:right;}
+.PickUpCard-list .right b{ font-size:24px; color:#e8380d; vertical-align:middle; }
+.PickUpCard-list .btn-org{ width:100px; height:40px; margin-left:20px; text-align:center;  font: normal 18px/40px Microsoft YaHei}
+
+/* 已提交 */
+.PickUpCard .c{  border: 1px solid #e3e6e0; border-top:1px solid #008842; background:#fff;}
+.PickUpCard .c dt{ display:block; zoom:1; padding:25px 55px; font: bold 24px/51px Microsoft YaHei; color:#008842; border-bottom:1px solid #e3e6e0; background:#fbfdf6;}
+.PickUpCard .c i{ width:68px; height:68px; margin-right:20px; background:url(../images/confirmpay_icon.png) no-repeat left}
+.PickUpCard .c i.i1{ background-position:-72px 0;}
+.PickUpCard .c i.i2{ background-position:0 0;}
+.PickUpCard .c dd{ padding:40px 145px; font-size:16px;}
+.PickUpCard .c li{ display:block; zoom:1; padding:15px 0; border-bottom:1px dashed #e3e6e0}
+.PickUpCard .c li.noborder{border-bottom:none;}
+.PickUpCard .c img{ vertical-align:middle;}
+.PickUpCard .c span{ padding-right:30px;}
+.PickUpCard .c .price{ color:#e8380d}
+.PickUpCard .c a{ color:#008842;  border-bottom:1px solid #008842;_border-bottom:none;}
+.PickUpCard .c .edit{ *display:inline-block; *height:20px; *line-height:20px; color:#008842; border-bottom:1px solid #008842; _border-bottom:none;}
+.PickUpCard .c .edit i{  width:12px; height:12px; _height:45px; margin-right:5px; background:url(../images/icon_edit.png) no-repeat center;}
+.PickUpCard .c .tip{ padding:20px 145px; font-size:14px; line-height:26px; border-top:1px solid #e3e6e0; background:#f7f7f7}
+.PickUpCard .c .tip b{ display:block; font-size:18px; font-weight:normal; ont-family:Microsoft YaHei}
+.PickUpCard .c .tip i{  display:inline-block;*display:inline;*zoom:1;width:24px; height:22px; margin-right:5px; background:url(../images/PickUpCard.png) no-repeat -285px -180px; }
+.PickUpCard .c .btn-org{ width:180px; height:45px; text-align:center; margin-top:15px; color:#fff; border-bottom:none; font: bold 18px/40px microsoft yahei;}
+.PickUpCard .c .btn-org span{ margin-left:5px; padding-right:0; font-size:16px;}
+.PickUpCard .c .input input{ width: 200px; padding:5px 10px; border: solid 1px #e0e0e0; line-height: 2; }
+
+/* 支付方式 */
+.r-payment{ display:none; padding:5px 0 5px 30px;}
+.r-payment .info li{padding:5px 0; float:none; margin:0; clear:both; zoom:1; line-height:25px; font-size:12px; border-bottom:none;}
+.r-payment .info li.bgcolor{background:#f5f5f5;}
+.r-payment input{width:13px; height:13px; overflow:hidden; margin-right:5px;}
+.r-payment img{vertical-align:middle;}
+.r-payment .pay-bank-wrap{ margin:0 0 0 20px;}
+.r-payment .pay-other{overflow:hidden; zoom:1; margin-top:10px;}
+.r-payment .pay-other li{overflow:hidden; float:left; width:30%; padding: 20px 20px 5px 0; clear:none;}
+.r-payment .pay-other label{margin:0;}
+.r-payment .pay-other input{float:left; margin-right:10px; margin-top:10px;}
+.r-payment .pay-other .pay-bank{ overflow:hidden;width:223px; height:34px; background:#fff; border:1px solid #cdcccb; float:left;}
+.r-payment .pay-other .pay-bank span{color:#857243; height:19px; line-height:19px; background:#f2ede0; display:inline-block; padding:0 5px; float:right; margin:6px 5px 0 0;}
+.r-payment .pay-other p{color:#df4e45; clear:both; padding:5px 0 0 23px;}
+.r-payment .selectother{ cursor:pointer; color: #666 !important; text-decoration:none !important;  border:none !important;  }
+.r-payment span{ padding-right:20px !important;}
+
+/*菜谱列表*/
+.recipe-select ul{ zoom: 1; margin-left:-25px;}
+.recipe-select li{ float:left; height:30px; margin:5px 0 5px 25px; cursor:pointer;}
+.recipe-select li a{ height:30px; font-size:14px; color:#85b100;}
+.recipe-select li i{ float:left; height:30px; margin-right:5px;}
+.recipe-select li span{ display:inline-block; height:30px; padding:0 5px; line-height:30px; }
+.recipe-select a:hover span, .recipe-select .on span{color:#fff; background:#85b100;}
+.recipe-list{ margin:20px 0;}
+.recipe-list .title{ padding-bottom:3px; color:#85b100 !important; font: bold 18px "Microsoft YaHei"; border-bottom:2px solid #85b100 !important;}
+.recipe-list .title i{ width:27px; height:31px; margin-right:5px; vertical-align:text-bottom; background:url(../images/recipe/recipe_icon.png) no-repeat 0 -109px;}
+.recipe-list ul{ overflow:hidden; zoom: 1; margin-left: -10px; _margin-left: -28px;}
+.recipe-item:hover{ border-color:#85b100; }
+.recipe-item { float: left; position: relative; width:270px; margin:5px 0 10px 10px; padding:10px; border:1px solid #fff; background:#fff;}
+.recipe-item .img{ position:relative; width:270px; height:270px;}
+.recipe-item .tag{ position:absolute; right:10px; top:10px; width:60px; height:60px;}
+.recipe-item .info{ padding:10px 0;}
+.recipe-item .name{ margin-bottom:10px; line-height:16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.recipe-item .name a:hover { color: #85b100; text-decoration:underline; }
+.recipe-item .like{ color:#85b100; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.recipe-item .like i{ width:18px; height:16px; margin-right:5px; background:url(../images/recipe/recipe_guide.png) no-repeat -3px -75px;}
+
+.ConfirmPay{ margin-top: 20px !important; border: none; background:none;}
+
+
+/*预存款支付弹框*/
+.yucunkuan .con { font-size: 14px; }
+.yucunkuan .btns{ margin-top:50px; }
+.yucunkuan .btns a{ display: inline-block; width: 40%; margin: 0 10px; line-height: 35px; }
+.yucunkuan2 .popout-wrap{ width: 550px; margin-left:-275px; }
+.yucunkuan2 .btns{ margin: 50px 0; }
+.yucunkuan2 .btns a{ display: inline-block; width: 40%; margin: 0 10px; font-size: 16px; line-height: 45px; }
+
+
+.o-prepaybox{ display: block; padding-top:15px; }
+.o-prepaybox .input{ display: block; width: 200px; padding:7px 10px; border: solid 1px #ccc; }
+.o-prepaybox .input input{ width: 100%; border: none; text-align: center; letter-spacing:10px; }
+.o-prepaybox .password a{ margin-left: 10px; }
+.peypopout .textleft{text-align:left;}
+.peypopout .close{ position: absolute; right: 15px; top: 15px; font-size: 30px; line-height: 18px; height: 18px; width: 18px; }
+
+/*---------modify by hj----------*/
+.hide{display:none;}
+.w300{ width: 300px;display:inline-block}
+.bankimg{ width: 130px;height: 34px}
+a{ cursor: pointer; }

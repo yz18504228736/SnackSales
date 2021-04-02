@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.NewArrivalMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.NewArrival">
+    <id column="new_arrival_id" jdbcType="INTEGER" property="newArrivalId" />
+    <result column="new_arrval_img_id" jdbcType="INTEGER" property="newArrvalImgId" />
+
+    <association property="specialType" column="special_type_id" select="com.shop.dao.SpecialTypeMapper.selectByPrimaryKey" javaType="com.shop.entity.SpecialType"></association>
+    <association property="stype" column="stype_id" select="com.shop.dao.StypeMapper.selectByPrimaryKey" javaType="com.shop.entity.Stype"></association>
+    <association property="product" column="product_id" select="com.shop.dao.ProductMapper.selectByPrimaryKey" javaType="com.shop.entity.Product"></association>
+
+  </resultMap>
+  <sql id="Base_Column_List">
+    new_arrival_id, special_type_id, stype_id, product_id, new_arrval_img_id
+  </sql>
+
+  <select id="findCount" resultType="java.lang.Long">
+    select count(new_arrival_id) from new_arrival
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+  select
+  <include refid="Base_Column_List" />
+  from new_arrival
+  limit #{firstResult}, #{maxResults}
+</select>
+  <select id="findAlls" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from new_arrival
+  </select>
+
+  <insert id="insertSelective" parameterType="com.shop.entity.NewArrival">
+    insert into new_arrival
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="newArrivalId != null">
+        new_arrival_id,
+      </if>
+      <if test="specialType != null and specialType.specialTypeId != null">
+        special_type_id,
+      </if>
+      <if test="product.stype != null and product.stype.stypeId != null">
+        stype_id,
+      </if>
+      <if test="product != null and product.productId != null">
+        product_id,
+      </if>
+      <if test="newArrvalImgId != null">
+        new_arrval_img_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="newArrivalId != null">
+        #{newArrivalId,jdbcType=INTEGER},
+      </if>
+      <if test="specialType != null and specialType.specialTypeId != null">
+        #{specialType.specialTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        #{product.stype.stypeId,jdbcType=INTEGER},
+      </if>
+      <if test="product != null and product.productId != null">
+        #{product.productId,jdbcType=INTEGER},
+      </if>
+      <if test="newArrvalImgId != null">
+        #{newArrvalImgId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.NewArrival">
+    update new_arrival
+    <set>
+      <if test="specialType != null and specialType.specialTypeId != null">
+        special_type_id = #{specialType.specialTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="stype != null and stype.stypeId != null">
+        stype_id = #{stype.stypeId,jdbcType=INTEGER},
+      </if>
+      <if test="product != null and product.productId != null">
+        product_id = #{product.productId,jdbcType=INTEGER},
+      </if>
+      <if test="newArrvalImgId != null">
+        new_arrval_img_id = #{newArrvalImgId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where new_arrival_id = #{newArrivalId,jdbcType=INTEGER}
+  </update>
+</mapper>

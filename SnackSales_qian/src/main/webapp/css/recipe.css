@@ -1,0 +1,94 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*广告位*/
+.page_ad{margin-bottom:20px;}
+.page_ad a{ display:block;}
+
+/*菜谱列表*/
+.recipe-select ul{ zoom: 1; margin-left:-20px;}
+.recipe-select li{ float:left; height:27px; margin:5px 0 5px 20px; cursor:pointer;}
+.recipe-select li a{ height:27px; font-size:14px; color:#85b100;}
+.recipe-select li i{ float:left; height:27px; margin-right:5px;}
+.recipe-select li span{ display:inline-block; height:27px; padding:0 5px; line-height:27px; }
+.recipe-select a:hover span, .recipe-select .on span{color:#fff; background:#85b100;}
+.recipe-list{ margin:20px 0 50px 0;}
+.recipe-list .title{ padding-bottom:3px; color:#85b100; font: bold 18px "Microsoft YaHei"; border-bottom:2px solid #85b100}
+.recipe-list .title i{ width:27px; height:31px; margin-right:5px; vertical-align:text-bottom; background:url(../images/recipe/recipe_icon.png) no-repeat 0 -109px;}
+.recipe-list ul{ overflow:hidden; zoom: 1; margin-left: -10px; _margin-left: -28px;}
+.recipe-item:hover{ border-color:#85b100; }
+.recipe-item { float: left; position: relative; width:270px; margin:5px 0 10px 10px; padding:10px; border:1px solid #fff; background:#fff;}
+.recipe-item .img{ position:relative; width:270px; height:270px;}
+.recipe-item .tag{ position:absolute; right:10px; top:10px; width:60px; height:60px;}
+.recipe-item .info{ padding:10px 0;}
+.recipe-item .name{ margin-bottom:10px; line-height:16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.recipe-item .name a:hover { color: #85b100; text-decoration:underline; }
+.recipe-item .like{ color:#85b100; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.recipe-item .like i{ width:18px; height:16px; margin-right:5px; background:url(../images/recipe/recipe_guide.png) no-repeat -3px -75px;}
+
+/*菜谱详情*/
+.recipe-intro{ padding-bottom:25px; border-bottom:1px solid #d9d9d9;}
+.recipe-intro .pic{ position: relative; float:left; width:500px; height:500px; border:1px solid #d9d9d9}
+.recipe-info{ width:670px; margin-left:527px;}
+.recipe-info h1{ font: normal 40px "Microsoft YaHei";}
+.recipe-info .tag{ margin-top:20px;}
+.recipe-info .tag span{ display:inline-block; padding:7px 17px; color:#85b100; font-size:14px; border:1px solid #cfcfcf; background:#fff;}
+.introduce{ margin-top:20px; color:#888; font-size:14px; line-height:25px;}
+.related { margin-top:30px;}
+.related li{ float:left; width:275px; height:50px; margin-bottom:35px; padding-left:60px; color:#888; font-size:16px; line-height:25px; background:url(../images/recipe/recipe_icon.png) no-repeat;}
+.related .method{ background-position: -35px 0;}
+.related .style{ background-position: -35px -50px;}
+.related .tasty{ background-position: -35px -100px;}
+.related .degree{ background-position: -35px -150px;}
+.related .setuptime{ background-position: -35px -200px;}
+.related .cookingtime{ background-position: -35px -250px;}
+.related li b{ color:#8eb623; font-weight:normal;}
+.recipe-main h4{  margin:20px 0; font: bold 20px "Microsoft YaHei"; color: #666;}
+.recipe-main .main{ float:left; width: 940px; }
+.recipe-step{border-bottom:1px solid #d9d9d9;}
+.step-con{ clear:both; width:940px; margin-bottom:20px;}
+.step-con .dt{ font: bold 16px/22px "Microsoft YaHei";}
+.step-con .dd:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.step-con p{ float:left; width:500px; padding:20px; font-size:14px; line-height:22px; color:#888;}
+.step-con img{ float:left;}
+.step-tips{ color:#888; font-size:14px; padding:20px 0; line-height:22px;}
+.recipe-buy .goods{ overflow: hidden; zoom: 1; width:975px; margin-left:-35px;}
+.product_item { float: left; position: relative; width:290px; margin:0 0 20px 35px; background:#fff;}
+.product_item input{  position: absolute; top: 298px; left: 10px; z-index: 100; width: 20px; line-height: 20px; height: 20px;}
+.product_item .p_img{ position:relative; width:290px; height:290px;}
+.product_item .p_info{ padding:10px;}
+.product_item .p_name{ width:240px; height:16px; margin-bottom:10px; padding-left:30px;  line-height:16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.product_item .p_name a:hover { color: #008842; text-decoration:underline; }
+.product_item .p_price{ width:270px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.product_item .p_price .price{ font-size:18px; color:#e7380d; vertical-align:middle;}
+.product_item .p_price .saletip{ margin-left:10px; color:#e8340c;}
+.product_item .p_price .saletip b{ padding:3px 5px; margin-right:5px; font-weight:normal; color:#fff; background:#e8340c;
+-webkit-border-radius: 2px;
+-moz-border-radius:2px;
+border-radius:2px;}
+.product_item .tag{ position:absolute; left:10px; top:10px; width:46px; height:46px;}
+.recipe-buy .total{ text-align:right; margin:20px 0 50px 0; padding:15px; line-height:36px; background:#e5e5e5;}
+.recipe-buy .total span{ display:inline-block; margin-right:20px;}
+.recipe-buy .total b{ color:#e8380d;}
+.recipe-buy .total strong{ color:#e8380d; font-size:16px;}
+.recipe-buy .total .btn-red{ display:inline-block; width:90px; height:36px; text-align:center; color:#fff; font-size:14px;}
+.side-guide{ position:relative; float:right; width:240px;}
+.recipe-guide{ width:240px; margin-top:70px; border:1px solid #d9d9d9; border-bottom:0; background:#fff;}
+.recipe-guide a{ display:block; height:24px; padding:15px 20px; border-bottom:1px solid #d9d9d9; color:#85b100; font: normal 16px/24px "Microsoft YaHei";}
+.recipe-guide i{ width:24px; height:24px; margin-right:25px; background:url(../images/recipe/recipe_guide.png) no-repeat;}
+.recipe-guide .icon01{ background-position:0 0;}
+.recipe-guide .icon02{ background-position:0 -24px;}
+.recipe-guide .icon03{ background-position:0 -48px;}
+.recipe-guide .icon04{ background-position:0 -72px;}
+.recipe-guide a:hover, .recipe-guide .current{ background:url(../images/recipe/recipe_guide.png) no-repeat 0 -94px;}
+.recipe-guide a:hover i, .recipe-guide .current i{ margin-right:45px;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-ms-transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+transition: all .3s ease-in}
+.recipe-guide a:hover .icon01, .recipe-guide .current .icon01{ background-position:-26px 0;}
+.recipe-guide a:hover .icon02, .recipe-guide .current .icon02{ background-position:-26px -24px;}
+.recipe-guide a:hover .icon03, .recipe-guide .current .icon03{ background-position:-26px -48px;}
+.recipe-guide a:hover .icon04, .recipe-guide .current .icon04{ background-position:-26px -72px;}
+.recipe-fixed{z-index: 999; position: fixed; _position: absolute; top: 0; margin-top:10px;}

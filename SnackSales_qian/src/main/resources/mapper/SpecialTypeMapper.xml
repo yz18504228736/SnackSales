@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.dao.SpecialTypeMapper">
+  <resultMap id="BaseResultMap" type="com.shop.entity.SpecialType">
+    <id column="special_type_id" jdbcType="INTEGER" property="specialTypeId" />
+    <result column="special_type_name" jdbcType="VARCHAR" property="specialTypeName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    special_type_id, special_type_name
+  </sql>
+  <insert id="insertSelective" parameterType="com.shop.entity.SpecialType">
+    insert into special_type
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="specialTypeId != null">
+        special_type_id,
+      </if>
+      <if test="specialTypeName != null">
+        special_type_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="specialTypeId != null">
+        #{specialTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="specialTypeName != null">
+        #{specialTypeName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shop.entity.SpecialType">
+    update special_type
+    <set>
+      <if test="specialTypeName != null">
+        special_type_name = #{specialTypeName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where special_type_id = #{specialTypeId,jdbcType=INTEGER}
+  </update>
+</mapper>

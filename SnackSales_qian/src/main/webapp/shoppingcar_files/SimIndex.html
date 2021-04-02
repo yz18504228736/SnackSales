@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://login.yiguo.com/login/SimIndex?Url=http://cart.yiguo.com/ShopCart/RedirectToOrder -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>登录弹框</title>
+
+    <link href="./SimIndex.css" rel="stylesheet">
+
+    
+
+    <!--IE6png兼容-->
+    <!--[if IE 6]>
+    <script src="/Content/DD_belatedPNG.js"></script>
+    <script src="/Content/IE6png.js"></script>
+    <![endif]-->
+    <script src="jquery.js(1)"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $(".gray").click(function () {
+                $("#imgcode").attr("src", "/verifycode" + "?_t=" + new Date().getTime());
+            });
+        });
+
+        !function () {
+            var a = document.createElement("script");
+            a.type = "text/javascript",
+            a.async = !0,
+            a.src = "//configch2.veinteractive.com/tags/CBD65260/4995/49F7/B51A/5963EB93BD47/tag.js";
+            var b = document.getElementsByTagName("head")[0];
+            if (b) b.appendChild(a, b);
+            else {
+                var b = document.getElementsByTagName("script")[0];
+                b.parentNode.insertBefore(a, b)
+            }
+        }();
+    </script><script type="text/javascript" async="" src="https://configch2.veinteractive.com/tags/CBD65260/4995/49F7/B51A/5963EB93BD47/tag.js"></script>
+</head>
+<body class="bgf" marginwidth="0" marginheight="0">
+
+<form action="https://login.yiguo.com/login/SimIndex?Url=http://cart.yiguo.com/ShopCart/RedirectToOrder" method="post">        <div class="p-login login-wrap">
+            <div class="login_form">
+                <div class="form-item">
+                    <label for="loginname" class="loginname"></label>
+
+                    <input autocomplete="off" class="iptxt" id="UserName" name="UserName" placeholder="邮箱/账号/已验证手机" type="text" value="">
+
+                </div>
+                <div class="form-item">
+                    <label for="password" class="password"></label>
+                    <input class="iptxt" id="Pwd" name="Pwd" placeholder="密码" type="password">
+                </div>
+                <div class="form-item" style="width:200px;    overflow: inherit;">
+                    <label for="password" class="password"></label>
+                    <p><input class="iptxt" id="VerifyCode" name="VerifyCode" placeholder="验证码" style="width:80px" type="text" value=""></p>
+                    <img src="./verifycode" id="imgcode" onclick="this.src=this.src" style="position: absolute; right: -50px; top: 8px;"><a href="javascript:void(0)" class="gray" style=" position: absolute; right: -100px; top: 10px;">换一张</a>
+                </div>
+                <div class="other">
+                    <span class="lgcheckbox">
+                        <input data-val="true" data-val-required="自动登录 字段是必需的。" id="UserNameRemeber" name="UserNameRemeber" type="checkbox" value="true"><input name="UserNameRemeber" type="hidden" value="false">
+                        <label for="lg">自动登录</label>
+                    </span>
+                    <span class="forget_pswd">
+                        <a href="https://login.yiguo.com/FindPwd" target="_blank">忘记登录密码？</a>
+                    </span>
+                </div>
+                <div class="login-btn">
+                    <a href="javascript:void(0)" id="btnLogin">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                </div>
+            </div>
+            <div class="coagent">
+                <h5>第三方登录：</h5>
+                <ul>
+                    <li><a href="https://login.yiguo.com/login/SimIndex?Url=http://cart.yiguo.com/ShopCart/RedirectToOrder###" onclick="parent.window.location = &#39;https://graph.qq.com/oauth2.0/authorize?response_type=code&amp;client_id=100270138&amp;redirect_uri=https://login.yiguo.com/QQ/Login&#39;" class="qq"></a></li>
+                    <li><a href="https://login.yiguo.com/login/SimIndex?Url=http://cart.yiguo.com/ShopCart/RedirectToOrder###" onclick="parent.window.location =&#39;https://api.weibo.com/oauth2/authorize?client_id=62745858&amp;redirect_uri=https://login.yiguo.com/Weibo/Login&amp;response_type=code&amp;display=default&#39;" class=" weibo"></a></li>
+                    <li style="margin-right:0;"><a href="https://login.yiguo.com/login/SimIndex?Url=http://cart.yiguo.com/ShopCart/RedirectToOrder###" onclick="parent.window.location =&#39;/SQ&#39;" class="anyue"></a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="reg">还没有账号？ <a href="https://login.yiguo.com/Register" target="_blank">立即注册</a> </div>
+        </div>
+</form>    <script type="text/javascript">
+
+        document.getElementById("Pwd").onkeydown = function PwdKeyDown(e) {
+            if (e.keyCode == 13) { formsubmit(); };
+        }
+
+        document.getElementById("btnLogin").onclick = function () { formsubmit(); };
+
+        function formsubmit() {
+            document.forms[0].submit();
+        }
+    </script>
+
+
+
+</body></html>

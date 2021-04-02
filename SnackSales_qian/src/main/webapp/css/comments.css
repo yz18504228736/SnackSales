@@ -1,0 +1,63 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* 退换货列表 */
+.comments { width: 942px; padding:20px; border: 1px solid #e3e6e0; background: #fff; }
+.comments .tips{ margin:25px 0 20px 0;}
+.comments .tips a{ padding-left:10px; color:#ef760a;}
+.comments .tips a:hover{ text-decoration:underline;}
+.comments .paging{ margin-top:60px;}
+
+.comments-list{ padding:10px;}
+.comments-list li{ padding:15px 0; border-bottom:1px solid #e6e6e6;}
+.comments-list .pro-info span{ display:inline-block;}
+.comments-list .pro-info .name{ width:402px;}
+.comments-list .pro-info img{ vertical-align:middle; margin-right:15px;}
+.comments-list .pro-info .price{ width:170px; color:#e93005; text-align:center}
+.comments-list .pro-info .num{ width:170px;text-align:center}
+.comments-list .pro-info .btn{ width:160px;text-align:center}
+.comments-list .pro-info .btn-wgn{ padding:5px 10px; background:#fffaf6;}
+
+.comment-box{ display:none; padding:0 95px 20px 95px;}
+.comment-box .txt{float:left; width:95px; margin-right:10px; text-align:right; display:inline; color:#333;}
+.comment_line{ width:100%; height:1px; border-top:1px dashed #e7e7e7; margin-bottom:20px;}
+
+.comment_score{overflow:hidden; zoom:1; margin:0 0 10px 0; line-height:20px;}
+.comment_score .score-team{ float:left; width:260px; margin:10px 0; color:#9E9E9F;}
+.comment_score .stars{float:left; margin-right:15px;}
+.comment_score .stars b{width:22px; height:20px;  display:block; float:left; padding-right:5px; cursor:pointer;overflow:hidden}
+.comment_score .stars .hover,.comment_score .stars .cur{background-position:-29px 0;}
+
+.comment-input{ overflow:hidden; _display:inline-block;}
+.comment-input textarea{border:1px solid #cfcfcf; color:#9f9f9f; font-size:12px; width:475px; height:95px; padding:10px; line-height:20px; resize:none;}
+.comment-input .LimiterMsg b{ color:#e93005; font-weight:normal;}
+
+.comment-pic .pic-upload{   position:relative; margin-top:10px;}
+.comment-pic .pic-upload .pic-upload-btn{overflow: hidden;position: relative; width: 25px;height: 33px; padding:11px 15px; color:#aaa; cursor: pointer; border:1px solid #ddd; background:#ececec}
+.comment-pic .pic-upload .pic-upload-btn input{position: absolute;left: 0;top: 0;font-size: 90px;margin: -20px 0 0 -1100px;opacity: 0;filter: alpha(opacity=0);cursor: pointer;}
+.comment-pic .pic-upload .pic-upload-img{ float:left; width:55px; height:55px; margin-right:10px; border:1px solid #ccc;}
+.comment-pic .pic-upload .pic-upload-img img{ width:55px; height:55px;}
+.comment-pic .pic-upload .pic-upload-bigimg { display: block;z-index: 999999; position: relative; *position:static;}
+.comment-pic .pic-upload .pic-upload-bigimg a img { position: absolute; left: 0px; top: 0px;  *position:static;}
+.comment-pic .pic-upload .pic-upload-bigimg a:hover { }
+.comment-pic .pic-upload .pic-upload-bigimg a:hover img { z-index:999; position: relative; left:0px; top: 0px;width:300px; height:300px; clip: rect(0px 137px 137px 0px); border:2px solid #fff; border:1px solid #ccc; \9; background:#fff;
+-webkit-box-shadow: 0 0 7px #666;
+-moz-box-shadow: 0 0 7px #666;
+box-shadow: 0 0 7px #666; }
+.comment-btn{ margin-top:20px;}
+.comment-btn input{ vertical-align:middle;}
+.comment-btn .btn-gn{ margin-left:20px; padding:7px 20px;}
+
+.comment-team { position:relative; color:#333;}
+.comment-team .img{ display:block; position:absolute; top:0; left:0; width:80px; height:80px;}
+.comment-team dl{ padding:0 0 0 90px; *margin-top:-10px;}
+.comment-team dt{ background:#f8fbf5; padding:10px; margin: 0 0 7px 0; line-height:22px;}
+.comment-team .stars { margin-top:5px; }
+.comment-team .stars b{ color:#e93005; font-weight:normal;}
+.comment-team .stars div{ float:left; margin-right:8px; line-height:17px;}
+.comment-team .stars .stars-bg {  height: 17px; width: 100px; overflow: hidden; }
+.comment-team .stars .stars-bg span { display: block; height: 17px;  }
+.comment-team dd{ padding:7px 10px; line-height:20px;}
+.comment-team .txt{ font-size:14px;}
+.comment-team .reply{ padding:5px 10px 5px 20px; color:#888;}
+.comment-team .time{ display:block; float:right; *margin-top:-25px;}
