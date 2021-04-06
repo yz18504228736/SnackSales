@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lelouch
-  Date: 2017/10/30
-  Time: 14:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <!-- saved from url=(0117)https://login.yiguo.com/ub/login.aspx?Url=http%3a%2f%2fhome.yiguo.com%3a80%2fTrade%2fOrderList%3fRndNumber%3d94939%26 -->
