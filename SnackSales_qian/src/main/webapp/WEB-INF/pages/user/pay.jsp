@@ -5,12 +5,12 @@
     <base href="<%=request.getContextPath()%>/">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script async="" src="pay_files/YGAnalytics.ashx"></script>
-    <title>结算-易果网</title>
+    <title>结算-零食在售网</title>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Keywords" content="水果，进口水果，国产水果，易果网">
-    <meta name="Description" content="易果网是全国最大的专业精品水果网之一，从事高品质水果及健康食品销售，提供各类进口水果，国产水果，以专业便捷的配送服务让易果迅速布遍全国各地，使您第一时间品尝到最优质最新鲜的水果。电话：400-820-8251,800-820-8251">
+    <meta name="Keywords" content="水果，进口水果，国产水果，零食在售网">
+    <meta name="Description" content="零食在售网是全国最大的专业精品水果网之一，从事高品质水果及健康食品销售，提供各类进口水果，国产水果，以专业便捷的配送服务让零食在售迅速布遍全国各地，使您第一时间品尝到最优质最新鲜的水果。电话：400-820-8251,800-820-8251">
     <meta property="qc:admins" content="15753240576117576375">
     <script type="text/javascript" async="" src="pay_files/dc.js"></script><script type="text/javascript" async="" src="pay_files/collect.js"></script><script type="text/javascript" async="" charset="utf-8" src="pay_files/core.php"></script><script type="text/javascript" async="" src="pay_files/vds.js"></script><script type="text/javascript" async="" src="pay_files/adw.js"></script><script src="pay_files/tm.js" async=""></script><script type="text/javascript" charset="utf-8" async="" src="pay_files/dplus.php"></script><script type="text/javascript">
         var yg_x = new Date();
@@ -42,7 +42,7 @@
     <div class="site-nav">
         <div class="wrap">
             <ul class="fl">
-                <li>欢迎光临易果生鲜！</li>
+                <li>欢迎光临零食在售！</li>
             </ul>
             <ul class="fr">
                 <li class="myyiguo">
@@ -142,7 +142,7 @@
                                 <span class="selected">${date}</span>
                             </td>
                             <td><span id="serverFreight">10</span>&nbsp;</td>
-                            <td>易果生鲜物流</td>
+                            <td>零食在售物流</td>
                         </tr>
                         </tbody>
                     </table>
@@ -233,12 +233,12 @@
     <div class="modal fade in" id="myModal3" style="display:none">
         <div class="modal-header">
             <a class="close" data-dismiss="modal">×</a>
-            <h3><i class="i-slctime"></i>易果生鲜自提服务协议</h3>
+            <h3><i class="i-slctime"></i>零食在售自提服务协议</h3>
         </div>
         <div class="modal-body">
             <p>选择提货方式前，请务必仔细阅读以下条款，并确保在充分理解与认同下述条款的情况下，选择“自提形式”作为提货方式，如有任何疑问或异议请勿选择“自提形式”：</p>
-            <h5>1. 提货时间：</h5><p>由于水果生鲜商品的保鲜要求等特殊性，如选择自提形式购买易果商品，请务必在所选择提货日期的当日11：00-19:00 到所选择的提货点完成货物自提，未按时提取造成的货物损毁、变质错过最佳赏味期限等责任，由客户自己承担，不属于甲方售后服务范围。</p>
-            <h5>2. 提货方式：</h5><p> 如选择自提形式购买易果商品，客户凭收货人手机号码及姓名到站点登记完成提货。</p>
+            <h5>1. 提货时间：</h5><p>由于水果生鲜商品的保鲜要求等特殊性，如选择自提形式购买零食在售商品，请务必在所选择提货日期的当日11：00-19:00 到所选择的提货点完成货物自提，未按时提取造成的货物损毁、变质错过最佳赏味期限等责任，由客户自己承担，不属于甲方售后服务范围。</p>
+            <h5>2. 提货方式：</h5><p> 如选择自提形式购买零食在售商品，客户凭收货人手机号码及姓名到站点登记完成提货。</p>
             <p>3. 本条未注明的签收、验收以及售后服务规则与其他配送方式一致。</p>
             <a class="btn-save" data-dismiss="modal" href="javascript:;">同意并继续</a>
         </div>
@@ -520,7 +520,7 @@
         </div>
         <div class="modal-body">
             <p class="txt1">什么是定时达？</p>
-            <p class="txt3">定时达是易果针对金卡及以上等级会员推出的专享特权服务，用户可以选择具体配送当日的具体时间段。</p>
+            <p class="txt3">定时达是零食在售针对金卡及以上等级会员推出的专享特权服务，用户可以选择具体配送当日的具体时间段。</p>
             <p class="txt2"><i class="dian"></i>目前支持此服务的配送城市为：上海、杭州、宁波、苏州、南京、无锡、昆山（部分区域不支持）</p>
             <p class="txt2"><i class="dian"></i>可选配送时段：上午：9:00~12：00 下午：12:00~18:00 晚上：18:00~21:00  全天配送：9:00~21:00</p>
             <p class="txt2"><i class="dian"></i>此服务仅支持自配商品（不含限时配送商品）。</p>
@@ -534,7 +534,7 @@
         </div>
         <div class="modal-body">
             <p class="txt1">什么是定时达？</p>
-            <p class="txt3">定时达是易果针对金卡及以上等级会员推出的专享特权服务，用户可以选择具体配送当日的具体时间段。</p>
+            <p class="txt3">定时达是零食在售针对金卡及以上等级会员推出的专享特权服务，用户可以选择具体配送当日的具体时间段。</p>
             <p class="txt2"><i class="dian"></i>目前支持此服务的配送城市为：上海、杭州、宁波、苏州、南京、无锡、昆山（部分区域不支持）</p>
             <p class="txt2"><i class="dian"></i>可选配送时段：上午：9:00~12：00 下午：12:00~18:00 晚上：18:00~21:00  全天配送：9:00~21:00</p>
             <p class="txt2"><i class="dian"></i>此服务仅支持自配商品（不含限时配送商品）。</p>
@@ -600,7 +600,7 @@
         <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
         <div class="copyright">
             <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
-            <p>版权所有<a href="http://www.yiguo.com/">上海易果电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
+            <p>版权所有<a href="http://www.yiguo.com/">上海零食在售电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
             <p class="authentication">
                 <a href="" target="_blank" rel="nofollow"><img src="address_files/153685368061665897_121x29.png" style="height:29px;"></a>
                 <a href="" target="_blank"><img src="address_files/footer_copy.gif" width="47px" height="47px"></a>

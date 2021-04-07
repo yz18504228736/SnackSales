@@ -27,7 +27,7 @@ function applyDate(pageData) {
                 $(".j_allorderli").utastebars({
                     tpl: $("#allorderstpl"),
                     context: result,
-                    emptytext: "<div class='order-none'>亲爱的易果用户，您目前尚无记录呦～<a href='http://www.yiguo.com/'>快去逛逛吧</a>～</div>"
+                    emptytext: "<div class='order-none'>亲爱的零食在售用户，您目前尚无记录呦～<a href='http://www.yiguo.com/'>快去逛逛吧</a>～</div>"
                 });
                 //$(".countdown").each(function () {
                 //    var ele = $(this);

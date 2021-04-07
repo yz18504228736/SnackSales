@@ -2,14 +2,14 @@
 
 //确认订单信息
 $(function () {
-    //我的易果
+    //我的零食在售
     $('.myyiguo').hover(function () {
         $(this).addClass('current');
     }, function () {
         $(this).removeClass('current');
     });
 
-    //手机易果
+    //手机零食在售
     $('.mobile').hover(function () {
         $(this).addClass('current');
     }, function () {

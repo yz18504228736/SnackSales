@@ -7,9 +7,9 @@
     <base href="<%=request.getContextPath()%>/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>进口水果_优质新鲜进口水果在线购买_新鲜水果网上订购_易果生鲜Yiguo官网</title>
-    <meta name="Keywords" content="水果,进口水果,国产水果,蔬菜,肉类,海鲜,禽蛋,粮油,甜点,葡萄酒,易果网">
-    <meta name="Description" content="易果生鲜Yiguo网是专业的进口生鲜水果食品网络购物平台，在这里您可以购买到精心挑选的优质健康易果进口水果，最新价格、优惠促销、实物图片等信息尽在易果网yiguo.com。">
+    <title>进口水果_优质新鲜进口水果在线购买_新鲜水果网上订购_零食在售Yiguo官网</title>
+    <meta name="Keywords" content="水果,进口水果,国产水果,蔬菜,肉类,海鲜,禽蛋,粮油,甜点,葡萄酒,零食在售网">
+    <meta name="Description" content="零食在售Yiguo网是专业的进口生鲜水果食品网络购物平台，在这里您可以购买到精心挑选的优质健康零食在售进口水果，最新价格、优惠促销、实物图片等信息尽在零食在售网yiguo.com。">
     <meta property="qc:admins" content="15753240576117576375" />
     <link rel="shortcut icon" href="http://static01.yiguo.com/common/images/yiguo.ico" />
     <link rel="dns-prefetch" href="/img01.yiguoimg.com" />
@@ -88,7 +88,7 @@
     <div class="site-nav">
         <div class="wrap">
             <ul class="fl">
-                <li>欢迎光临易果生鲜！</li>
+                <li>欢迎光临零食在售！</li>
             </ul>
             <ul class="fr">
                 <li class="myyiguo">
@@ -552,7 +552,7 @@
             <div class="service"><span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span><span>周一至周日 9:00-21:00</span></div>
             <div class="copyright">
                 <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
-                <p> <a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action" target="_blank" rel="nofollow">沪ICP备09008015号 </a>  Copyright © 2005-2017 <a href="">上海易果电子商务有限公司</a>版权所有</p>
+                <p> <a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action" target="_blank" rel="nofollow">沪ICP备09008015号 </a>  Copyright © 2005-2017 <a href="">上海零食在售电子商务有限公司</a>版权所有</p>
                 <p class="authentication">
                     <a href="legal" target="_blank" rel="nofollow"><img src="http://img09.yiguoimg.com/e/albums/2017/170309/153685368061665897_121x29.png" style="height:29px;"></a>
                     <a href="http://shwg.dianping.com/index.html" target="_blank" rel="nofollow"><img src="http://img05.yiguoimg.com/e/web/160420/01632/141253/2517491005058doc.png" height="47"></a>

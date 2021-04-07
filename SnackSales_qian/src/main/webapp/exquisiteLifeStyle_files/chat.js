@@ -70,7 +70,7 @@ var loadchat = function (data) {
             uid: data.IMAccount.IMUserName,
             appkey: data.AppKey,
             credential: data.IMAccount.IMPassword,
-            touid: '易果电子',
+            touid: '零食在售电子',
             theme: 'lightgreen',
             sendMsgToCustomService: true,
             customUrl: chat.url.yw + 'client/index?pagetype=' + _type + '&data=' + _data,

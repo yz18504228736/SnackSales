@@ -7,10 +7,10 @@
     <base href="<%=request.getContextPath()%>/">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script charset="utf-8" type="text/javascript" src="js/pckit.js"></script>
 
-    <title>易果生鲜_全球精选</title>
+    <title>零食在售_全球精选</title>
 
-    <meta name="Keywords" content="水果，进口水果，国产水果，易果网">
-    <meta name="Description" content="易果生鲜Yiguo网是专业的进口生鲜水果食品网络购物平台，为您精选全球3001多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，易果网是您悠悦生活的品质之选。">
+    <meta name="Keywords" content="水果，进口水果，国产水果，零食在售网">
+    <meta name="Description" content="零食在售Yiguo网是专业的进口生鲜水果食品网络购物平台，为您精选全球3001多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，零食在售网是您悠悦生活的品质之选。">
     <meta property="qc:admins" content="15753240576117576375">
     <link rel="shortcut icon" href="">
     <link href="css/public.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
     <div class="site-nav">
         <div class="wrap">
             <ul class="fl">
-                <li>欢迎光临易果生鲜！</li>
+                <li>欢迎光临零食在售！</li>
                 <!--送货城市 开始-->
                 <li class="city clearfix">
                     <div class="city-sz">配送至：</div>
@@ -342,7 +342,7 @@
     </div>
     <div class="wrap">
         <!--面包屑-->
-        <div class="crumbs"><a class="ml0" href="http://www.yiguo.com/">首页</a>&gt;<a href="http://home.yiguo.com/Trade/Index" class="j_ygnav">我的易果</a><span class="j_thridcrumbs hide">&gt;<a href="javascript:void(0)" class="on j_thirdnav">评论商品</a></span></div>
+        <div class="crumbs"><a class="ml0" href="http://www.yiguo.com/">首页</a>&gt;<a href="http://home.yiguo.com/Trade/Index" class="j_ygnav">我的零食在售</a><span class="j_thridcrumbs hide">&gt;<a href="javascript:void(0)" class="on j_thirdnav">评论商品</a></span></div>
         <div class="content myyg">
             <div class="sub">
                 <div class="menu j_menu">
@@ -457,7 +457,7 @@
                     <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
                     <div class="copyright">
                         <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
-                        <p>版权所有<a href="http://www.yiguo.com/">上海易果电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
+                        <p>版权所有<a href="http://www.yiguo.com/">上海零食在售电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
                         <p class="authentication">
                             <a href="http://www.yiguo.com/legal" target="_blank" rel="nofollow"><img src="myorders_files/153685368061665897_121x29.png" style="height:29px;"></a>
                             <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110512114405424" target="_blank"><img src="myorders_files/footer_copy.gif" width="47px" height="47px"></a>

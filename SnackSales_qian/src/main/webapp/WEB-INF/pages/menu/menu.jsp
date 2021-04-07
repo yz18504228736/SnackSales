@@ -10,9 +10,9 @@
 
         </script>
 
-    <title>易果生鲜_全球精选</title>
-    <meta name="Keywords" content="水果，进口水果，国产水果，易果网">
-    <meta name="Description" content="易果网是全国最大的专业精品水果网之一，从事高品质水果及健康食品销售，提供各类进口水果，国产水果，以专业便捷的配送服务让易果迅速布遍全国各地，使您第一时间品尝到最优质最新鲜的水果。电话：400-820-8251,800-820-8251">
+    <title>零食在售_全球精选</title>
+    <meta name="Keywords" content="水果，进口水果，国产水果，零食在售网">
+    <meta name="Description" content="零食在售网是全国最大的专业精品水果网之一，从事高品质水果及健康食品销售，提供各类进口水果，国产水果，以专业便捷的配送服务让零食在售迅速布遍全国各地，使您第一时间品尝到最优质最新鲜的水果。电话：400-820-8251,800-820-8251">
     <meta property="qc:admins" content="15753240576117576375">
     <link rel="shortcut icon" href="">
     <link href="css/public.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
     <div class="site-nav">
         <div class="wrap">
             <ul class="fl">
-                <li>欢迎光临易果生鲜！</li>
+                <li>欢迎光临零食在售！</li>
             </ul>
             <ul class="fr">
                 <li class="myyiguo">
@@ -444,7 +444,7 @@
             <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 8:00-20:00</span></div>
             <div class="copyright">
                 <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
-                <p>版权所有<a href="http://www.yiguo.com/">上海易果电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
+                <p>版权所有<a href="http://www.yiguo.com/">上海零食在售电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
                 <p class="authentication">
                     <a href="" target="_blank"><img src="images/footer_copy.gif" width="47px" height="47px"></a>
                     <a target="_blank" href="" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="images/ghs.png" style="float:left;"><span style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">沪公网安备 31010502000002号</span></a>

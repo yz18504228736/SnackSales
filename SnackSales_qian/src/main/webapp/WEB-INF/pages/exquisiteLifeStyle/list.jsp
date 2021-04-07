@@ -13,9 +13,9 @@
 </script><script charset="utf-8" type="text/javascript" src="exquisiteLifeStyle_files/pckit.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>优质生活（上海）_易果生鲜Yiguo网_全球精选_生鲜果蔬 品质食材_易果网yiguo.com</title>
-    <meta name="Keywords" content="水果,进口水果,国产水果,蔬菜,肉类,海鲜,禽蛋,粮油,甜点,葡萄酒,易果网">
-    <meta name="Description" content="易果生鲜Yiguo网是专业的进口生鲜水果食品网络购物平台，为您精选全球3000多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，易果网是您悠悦生活的品质之选。">
+    <title>优质生活（上海）_零食在售Yiguo网_全球精选_生鲜果蔬 品质食材_零食在售网yiguo.com</title>
+    <meta name="Keywords" content="水果,进口水果,国产水果,蔬菜,肉类,海鲜,禽蛋,粮油,甜点,葡萄酒,零食在售网">
+    <meta name="Description" content="零食在售Yiguo网是专业的进口生鲜水果食品网络购物平台，为您精选全球3000多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，零食在售网是您悠悦生活的品质之选。">
     <meta property="qc:admins" content="15753240576117576375">
     <link rel="shortcut icon" href="">
     <link rel="dns-prefetch" href="">
@@ -88,7 +88,7 @@
     <div class="site-nav">
         <div class="wrap">
             <ul class="fl">
-                <li>欢迎光临易果生鲜！</li>
+                <li>欢迎光临零食在售！</li>
                 <!--送货城市 开始-->
                 <li class="city clearfix">
                     <div class="city-sz">配送至：</div>
@@ -544,7 +544,7 @@
             <div class="service"><span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span><span>周一至周日 9:00-21:00</span></div>
             <div class="copyright">
                 <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
-                <p> <a href="" target="_blank" rel="nofollow">沪ICP备09008015号 </a>  Copyright © 2005-2017 <a href="">上海易果电子商务有限公司</a>版权所有</p>
+                <p> <a href="" target="_blank" rel="nofollow">沪ICP备09008015号 </a>  Copyright © 2005-2017 <a href="">上海零食在售电子商务有限公司</a>版权所有</p>
                 <p class="authentication">
                     <a href="" target="_blank" rel="nofollow"><img src="newarrival_files/153685368061665897_121x29.png" style="height:29px;"></a>
                     <a href="" target="_blank" rel="nofollow"><img src="newarrival_files/2517491005058doc.png" height="47"></a>

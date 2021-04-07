@@ -188,7 +188,7 @@ background: url(../Content/img/header-img.png) no-repeat -32px 0 \9;}
 .bigautocomplete-layout .ct{background:none repeat scroll 0 0 #ffffff !important;}
 .bigautocomplete-layout div{word-wrap:break-word;word-break:break-all;padding:1px 5px;}
  input{ background-color:#ffffff !important;}*/
-/*我的易果*/
+/*我的零食在售*/
 .myyiguo{z-index:88888; position:relative; float:left; margin-left:98px; width:105px; }
 .myyiguo dt a{ position:relative;display:block; width:103px; padding:8px 0;text-align:center;}
 .myyiguo dt i{ width:18px; height:18px; margin-right:5px; background:url(../Content/img/header-img.png) no-repeat -220px 0;}

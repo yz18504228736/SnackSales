@@ -274,7 +274,7 @@ $(function () {
             url = window.location.href,
             current,
             navData = [
-                { url: "/Trade/Index", name: "我的易果" },
+                { url: "/Trade/Index", name: "我的零食在售" },
                 { url: "/Trade/MyCoupons", name: "我的优惠券" },
                 { url: "/Trade/UMoney", name: "我的悠币" },
                 { url: "/Trade/UseGiftCard", name: "我的礼品卡" },

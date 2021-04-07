@@ -1,6 +1,6 @@
 ﻿/**
 * 
-*   易果移动网站 dplus 
+*   零食在售移动网站 dplus
 *
 */
 var YgmDplus = {};

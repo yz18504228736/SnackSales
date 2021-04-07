@@ -2081,7 +2081,7 @@ G.app.orderSubmit = {
             G.app.Loading.close();
             this.orderLock = 0;
             $("#btnOrderSubmit").css("background-color", "rgb(255, 83, 23)").css("Cursor", "pointer");
-            G.alert.warn("请确认已阅读并同意《易果生鲜自提服务协议》！");
+            G.alert.warn("请确认已阅读并同意《零食在售自提服务协议》！");
             return
         }
         //if ($("#order3 .o-payment .method").is(':hidden')) {

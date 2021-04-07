@@ -6,7 +6,7 @@
     <base href="<%=request.getContextPath()%>/">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>易果网</title>
+    <title>零食在售网</title>
     <link rel="shortcut icon" href="">
     <script type="text/javascript" async="" src="login_files/collect.js.下载"></script><script type="text/javascript" async="" src="login_files/dc.js.下载"></script><script type="text/javascript" async="" src="login_files/vds.js.下载"></script><script type="text/javascript" async="" src="login_files/adw.js.下载"></script><script src="login_files/tm.js.下载" async=""></script><script src="login_files/jquery.js.下载"></script>
 
@@ -23,7 +23,7 @@
 
     <script type="text/javascript">
         $(function () {
-            //手机易果
+            //手机零食在售
             $('.mobile .mobile-tit').wrap('<div class="mobile-tit-w"></div>');
             $('.mobile').hover(function () {
                 $(this).addClass('mobile-hover');
@@ -168,7 +168,7 @@
             <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
             <div class="copyright">
                 <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
-                <p>沪ICP备09008015号 Copyright © 2005-2017 <a href="http://www.yiguo.com/">上海易果电子商务有限公司</a>版权所有</p>
+                <p>沪ICP备09008015号 Copyright © 2005-2017 <a href="http://www.yiguo.com/">上海零食在售电子商务有限公司</a>版权所有</p>
                 <p class="authentication">
                     <a href="http://www.yiguo.com/legal" target="_blank" rel="nofollow"><img src="login_files/153685368061665897_121x29.png" style="height:29px;"></a>
                     <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110512114405424" target="_blank"><img src="login_files/footer_copy.gif" width="47px" height="47px"></a>

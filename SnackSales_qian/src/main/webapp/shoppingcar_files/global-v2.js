@@ -324,7 +324,7 @@ G.app.cart.module = (function () {
                 _private.callback(d, func, o);
             });
         },
-        delOne: function (o, commodityId, func) {//删除易果小购物车商品
+        delOne: function (o, commodityId, func) {//删除零食在售小购物车商品
             $.getJSON(G.logic.constants.urlAddShopCartHandler + "?datestamp=" + new Date().getTime() + "&jsoncallback=?", { CommodityId: commodityId, Type: '2' }, function (d) {
                 _private.callback(d, func, o);
             });
