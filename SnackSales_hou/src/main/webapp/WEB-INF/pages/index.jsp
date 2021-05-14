@@ -94,7 +94,7 @@ $(function(){
 	<div id="layout">
 		<div id="header">
 			<div class="headerNav">
-				<img src="img/logo.ico" /><h1>卖吃的后台管理系统</h1>
+				<img src="img/logo.ico" /><h1>零食在售后台管理系统</h1>
 				<ul class="nav">
 					<li><a href="javascript:void(0)">欢迎您，${manName}</a></li>
 					<li><a href="../mangener/login">退出</a></li>
@@ -144,12 +144,12 @@ $(function(){
 									<li><a href="../exquisiteLifeStyle/list?pageNum=1" target="navTab" rel="main">优质生活</a></li>
 								</ul>
 							</li>
-							<li><a href="javascript:void(0);" >菜谱管理</a>
+							<li><a href="javascript:void(0);" >零食教程</a>
 								<ul>
-									<li><a href="../menu/list?pageNum=1" target="navTab" rel="main">菜谱管理</a></li>
+									<li><a href="../menu/list?pageNum=1" target="navTab" rel="main">零食教程</a></li>
 								</ul>
 								<ul>
-									<li><a href="../menutype/list?pageNum=1" target="navTab" rel="main">菜谱类别管理</a></li>
+									<li><a href="../menutype/list?pageNum=1" target="navTab" rel="main">教程类别管理</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0);" >用户信息管理</a>

@@ -6,7 +6,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>后台管理平台</title>
+	<title>零食在售后台管理平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -27,20 +27,14 @@
 <body>
 
 <div class="page-container">
-	<h1><font color="orange">后台管理平台</font></h1>
+	<h1><font color="orange">零食在售后台管理平台</font></h1>
 	<form action="mangener/login" method="post">
 		<input type="text" name="manName" class="username" placeholder="用户名">
 		<input type="password" name="manPwd" class="password" placeholder="密码">
 		<button type="submit">登录</button>
 		<div class="error"><span>+</span></div>
 	</form>
-	<div class="connect">
-		<p>Or connect with:</p>
-		<p>
-			<a class="facebook" href=""></a>
-			<a class="twitter" href=""></a>
-		</p>
-	</div>
+
 
 
 	<!-- Javascript -->
