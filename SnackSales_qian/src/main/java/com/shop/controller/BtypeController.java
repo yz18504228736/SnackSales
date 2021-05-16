@@ -19,6 +19,7 @@ public class BtypeController {
     @Resource
     private BtypeBiz btypeBiz;
 
+
     //显示所有大类的类型
     @RequestMapping("/list")
     public String findAllBtype(Model model){
