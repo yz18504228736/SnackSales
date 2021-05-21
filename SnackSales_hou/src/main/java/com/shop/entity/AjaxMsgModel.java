@@ -1,8 +1,6 @@
 package com.shop.entity;
 
-/**
- * Created by Administrator on 2017/10/23.
- **/
+
 public class AjaxMsgModel {
     private String statusCode;
     private String message;

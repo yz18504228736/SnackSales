@@ -39,7 +39,7 @@ public class UserController {
 //        return userInfor;
 //    }
 
-
+    //登录
     @RequestMapping("/doLogin")
     public String doLogin(){
         return "/user/login";
@@ -57,7 +57,7 @@ public class UserController {
         }
     }
 
-
+    //注册
     @RequestMapping("/doRegister")
     public String doRegister(){
         return "/user/register";

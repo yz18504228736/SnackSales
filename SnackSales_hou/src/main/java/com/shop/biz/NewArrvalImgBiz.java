@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Administrator on 2017/10/26.
- **/
 @Service
 public class NewArrvalImgBiz {
     @Resource

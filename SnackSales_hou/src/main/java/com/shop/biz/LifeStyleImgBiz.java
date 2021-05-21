@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Administrator on 2017/10/27.
- **/
+
 @Service
 public class LifeStyleImgBiz {
     @Resource

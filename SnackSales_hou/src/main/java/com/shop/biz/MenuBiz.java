@@ -8,9 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/10/25.
- **/
+
 @Service
 public class MenuBiz {
       @Resource

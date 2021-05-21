@@ -20,9 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * Created by Administrator on 2017/10/25.
- **/
 @Controller
 @RequestMapping("/menu")
 public class MenuController {

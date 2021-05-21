@@ -17,9 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * Created by Administrator on 2017/10/23.
- **/
 @Controller
 @RequestMapping("/newarrival")
 public class NewArrivalController {

@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/11/1.
- **/
+
 @Controller
 @RequestMapping("/pay")
 public class PayController {

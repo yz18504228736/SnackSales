@@ -12,9 +12,6 @@ import java.io.FileInputStream;
 import java.io.OutputStream;
 import java.util.Map;
 
-/**
- * Created by Administrator on 2017/10/23.
- **/
 @Controller
 public class FileController {
     @RequestMapping("/show/{fileName}")
