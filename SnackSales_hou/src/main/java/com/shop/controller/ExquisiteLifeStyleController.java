@@ -99,7 +99,7 @@ public class ExquisiteLifeStyleController {
         try {
             MultipartFile file = request.getFile("file");
             String fileName = UUID.randomUUID().toString();
-            File newFile = new File(Constants.FILE_PATH+fileName);
+            File newFile = new File(Constants.FILE_PATH+fileName+".jpg");
             file.transferTo(newFile);
             LifeStyleImg lifeStyleImg = new LifeStyleImg();
             lifeStyleImg.setLifestyleImgName(fileName);
@@ -120,7 +120,7 @@ public class ExquisiteLifeStyleController {
             MultipartFile file = request.getFile("file");
             if (file.getSize() !=0){
                 String fileName = UUID.randomUUID().toString();
-                File newFile = new File(Constants.FILE_PATH+fileName);
+                File newFile = new File(Constants.FILE_PATH+fileName+".jpg");
                 file.transferTo(newFile);
                 LifeStyleImg lifeStyleImg = new LifeStyleImg();
                 lifeStyleImg.setLifestyleImgName(fileName);

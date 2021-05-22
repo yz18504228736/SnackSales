@@ -8,16 +8,16 @@
         <input type="hidden" name="menuId" value="${menu.menuId}"/>
         <div class="pageFormContent" layoutH="56">
             <p>
-                <label>菜谱类别：</label>
+                <label>零食类别：</label>
                 <form:select path="menutype.menuTypeId" items="${list}" itemLabel="menuTypeName" itemValue="menuTypeId" id="menutype" cssClass="required">
                 </form:select>
             </p>
             <p>
-                <label>菜谱描述：</label>
+                <label>零食描述：</label>
                 <input name="menuDesc" class="required" type="text" size="30" value="${menu.menuDesc }"/>
             </p>
             <p>
-                <label>菜谱名字：</label>
+                <label>零食名字：</label>
                 <input name="menuName" class="required" type="text" size="30" value="${menu.menuName }"/>
             </p>
 
@@ -30,7 +30,7 @@
             </p>
 
             <p>
-                <label>菜谱步骤：</label>
+                <label>零食步骤：</label>
                 <textarea name="menuContent" value="${menu.menuContent }" class="editor" rows="15" cols="80" ></textarea>
             </p>
         </div>

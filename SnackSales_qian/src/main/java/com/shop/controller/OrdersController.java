@@ -41,8 +41,8 @@ public class OrdersController {
            for(OrderList orderList:list){
             System.out.println(orderList);}
         return "/user/orders";
-
     }
+
     @RequestMapping("/bought/{userId}")
     public String bought(@PathVariable("userId")int userId,Model model,@RequestParam(value = "pageNum",defaultValue = "0") int pageNum, @RequestParam(value = "pageSize",defaultValue = "10")int pageSize){
         List<Orders> list= ordersBiz.findBought(pageNum,pageSize,userId);
@@ -60,7 +60,6 @@ public class OrdersController {
 
    @RequestMapping("/detail")
     public String detail(String orderName,Model model){
-
        try {
            orderName = new String(orderName.getBytes("ISO8859-1"), "UTF-8");
        } catch (UnsupportedEncodingException e) {
@@ -115,10 +114,11 @@ public class OrdersController {
    @RequestMapping("/notPaid")
     public String notPaid(HttpServletRequest request){
        User user = (User) request.getSession().getAttribute("currentUser");
-       String userAddressId=request.getParameter("userAddressId");
+//       String userAddressId=request.getParameter("userAddressId1");
+       String userAddressId="1";
        List<ShoppingCar> shoppingCarList = shoppingcarBiz.findAllShoppingCart(user.getUserId());
-//        int id=Integer.parseInt(userAddressId);
-       Address address=addressBiz.findAdressByAddressId(2);
+        int id=Integer.parseInt(userAddressId);
+       Address address=addressBiz.findAdressByAddressId(id);
            String orderName= UUID.randomUUID().toString();
            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
            Date date=new Date();

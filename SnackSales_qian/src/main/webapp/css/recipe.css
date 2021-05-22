@@ -5,7 +5,7 @@
 .page_ad{margin-bottom:20px;}
 .page_ad a{ display:block;}
 
-/*菜谱列表*/
+/*零食列表*/
 .recipe-select ul{ zoom: 1; margin-left:-20px;}
 .recipe-select li{ float:left; height:27px; margin:5px 0 5px 20px; cursor:pointer;}
 .recipe-select li a{ height:27px; font-size:14px; color:#85b100;}
@@ -26,7 +26,7 @@
 .recipe-item .like{ color:#85b100; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .recipe-item .like i{ width:18px; height:16px; margin-right:5px; background:url(../images/recipe/recipe_guide.png) no-repeat -3px -75px;}
 
-/*菜谱详情*/
+/*零食详情*/
 .recipe-intro{ padding-bottom:25px; border-bottom:1px solid #d9d9d9;}
 .recipe-intro .pic{ position: relative; float:left; width:500px; height:500px; border:1px solid #d9d9d9}
 .recipe-info{ width:670px; margin-left:527px;}

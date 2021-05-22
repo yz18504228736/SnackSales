@@ -8,7 +8,7 @@
         <input type="hidden" name="menuTypeId" value="${menutype.menuTypeId}"/>
         <div class="pageFormContent" layoutH="56">
             <p>
-                <label>菜谱类别描述：</label>
+                <label>零食类别描述：</label>
                 <input name="menuTypeName" class="required" type="text" size="30" value="${menutype.menuTypeName }"/>
             </p>
         </div>

@@ -120,7 +120,6 @@
                             </ul>
 
                             <a id="receive3" href="" class="link oReceiveClose" style="display:none;">展开其他地址</a>
-                            <a data-toggle="modal" href="" data-backdrop="static" class="link" id="theAddress" style="cursor:pointer;"><i></i>使用新地址</a>
                         </div>
                     </div>
 

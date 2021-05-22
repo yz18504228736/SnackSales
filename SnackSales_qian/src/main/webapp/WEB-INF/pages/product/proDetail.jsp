@@ -9,7 +9,7 @@
     <script charset="utf-8" type="text/javascript" src="js/pckit.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>${product.productName}在线购买_零食在售Yiguo官网</title>
+    <title>${product.productName}在线购买_零食在售官网</title>
     <meta name="Keywords" content="水果,进口水果,国产水果,蔬菜,肉类,海鲜,禽蛋,粮油,甜点,葡萄酒,零食在售网">
     <meta name="Description" content="零食在售Yiguo的，零食在售Yiguo生鲜保证送到您手中的每一个南非柠檬8个80g以上/个皆新鲜美味。">
     <meta property="qc:admins" content="15753240576117576375">
@@ -385,7 +385,7 @@
                 <ul id="homenav">
                     <li><a href="newarrival/list" target="_blank">新品专区</a></li>
                     <li><a href="exquisiteLifeStyle/list" target="_blank">优质生活</a></li>
-                    <li><a href="menu/list1/" target="_blank">菜谱专栏</a></li>
+                    <li><a href="menu/list1/" target="_blank">零食专栏</a></li>
                 </ul>
             </div>
         </div>
@@ -407,14 +407,14 @@
                 <div class="pic-preview">
                     <div class="pic-big">
                         <c:forEach items="${proDisplayList}" var="proDisplay">
-                            <img class="j_product_img" width="500" height="500" src="shows/${proDisplay.proDisplayImg}" style="display:  block;">
+                            <img class="j_product_img" width="500" height="500" src="images/${proDisplay.proDisplayImg}.jpg" style="display:  block;">
                         </c:forEach>
                     </div>
                     <div class="pic-thumb">
                         <div class="picList">
                             <ul>
                                 <c:forEach items="${proDisplayList}" var="proDisplay">
-                                    <li><img width="85" height="85" src="shows/${proDisplay.proDisplayImg}" name="${proDisplay.proDisplayImg}"></li>
+                                    <li><img width="85" height="85" src="images/${proDisplay.proDisplayImg}.jpg" name="${proDisplay.proDisplayImg}"></li>
                                 </c:forEach>
                             </ul>
                         </div>

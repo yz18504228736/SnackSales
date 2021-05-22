@@ -4,6 +4,7 @@
 <head>
     <base href="<%=request.getContextPath()%>/">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html charset=gb2312">
     <script charset="utf-8" type="text/javascript" src="address_files/pckit.js">
 
     </script>
@@ -11,7 +12,7 @@
     <title>零食在售_全球精选</title>
 
     <meta name="Keywords" content="水果，进口水果，国产水果，零食在售网">
-    <meta name="Description" content="零食在售//鲜Yiguo网是专业的进口生鲜水果食品网络购物平台，为您精选全球3001多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，零食在售网是您悠悦生活的品质之选。">
+    <meta name="Description" content="零食在售网是专业的进口生鲜水果食品网络购物平台，为您精选全球3001多种生鲜果蔬品质食材，在体验网上购物新模式的同时享尽各国新鲜美味，零食在售网是您悠悦生活的品质之选。">
     <meta property="qc:admins" content="15753240576117576375">
     <link rel="shortcut icon" href="http://static01.yiguo.com/common/images/yiguo.ico">
     <link href="address_files/public.css" rel="stylesheet" type="text/css">
@@ -352,7 +353,7 @@
                 <ul id="homenav">
                     <li><a href="newarrival/list" target="_blank">新品专区</a></li>
                     <li><a href="exquisiteLifeStyle/list" target="_blank">优质生活</a></li>
-                    <li><a href="menu/list1/" target="_blank">菜谱专栏</a></li>
+                    <li><a href="menu/list1/" target="_blank">零食教程</a></li>
                 </ul>
             </div>
         </div>
@@ -417,7 +418,7 @@
 
             <div class="main address">
                 <div class="title">收货地址管理</div>
-                <div class="addrs"><a href="javascript:" data-toggle="modal" class="btn-gn addConsignee">新增收货地址</a>您已创建<b class="consigneeCount">3</b>个收货地址，最多可创建<b>20</b>个</div>
+                <div class="addrs"><a href="javascript:" data-toggle="modal" class="btn-gn addConsignee">新增收货地址</a>您已创建<b class="consigneeCount">1</b>个收货地址，最多可创建<b>20</b>个</div>
                 <div class="addressList">
                     <ul>
                         <c:forEach items="${addressList}" var="address">
@@ -425,11 +426,10 @@
                                 <dl>
                                     <dt><div class="name">${address.receiverName}<span></span><div class="del-btn" data-id="a7a632c8-2fcb-4140-af08-1a47378c604e">×</div></div></dt>
                                     <dd><span>收货人：</span>${address.receiverName}</dd>
-                                    <dd><span>所在地区：</span>上海 浦东新区 浦东新区</dd>
                                     <dd><span>地址：</span>${address.addressName}</dd>
                                     <dd><span>手机：</span>${address.phonenum}</dd>
                                 </dl>
-                                <div class="btns"><a class="edit editConsignee" href="/address/preUpdate/${address.addressId }" data-toggle="modal" data-id="a7a632c8-2fcb-4140-af08-1a47378c604e">编辑</a></div>
+                                <div class="btns"><a class="edit editConsignee" href="/address/preUpdate/${address.addressId }" data-toggle="modal" data-id="a7a632c8-2fcb-4140-af08-1a47378c604e">修改</a></div>
                                 <div class="btns"><a class="edit editConsignee" href="/address/delete/${address.addressId }" data-toggle="modal" data-id="a7a632c8-2fcb-4140-af08-1a47378c604e">删除</a></div>
                             </li>
                         </c:forEach>
@@ -439,22 +439,6 @@
                 <div class="paging j_active j_bind" id="j_pages"><div class="paging-num">&nbsp;<a href="javascript:void(0);" class="j_pageopt" data-index="previous">上一页</a>&nbsp;<a class="this j_pageopt" href="javascript:void(0);" data-index="0">1</a>&nbsp;<a href="javascript:void(0);" class="j_pageopt" data-index="nextpage">下一页</a></div><div class="paging-total">共 1页</div><div class="paging-form"><span>到第</span><input class="j_pageval" type="text" value="1"><span>页</span><button class="j_pagebtn">确定</button></div></div>
                 <!--页码 结束-->
 
-                <%--<script id="consigneeRow" type="text/x-handlebars-template">--%>
-                    <%--{{#if data}}--%>
-                    <%--{{#each data}}--%>
-                    <%--<li>--%>
-                        <%--<dl>--%>
-                            <%--<dt><div class="name">{{ConsigneeName}}<span>{{#equal IsDefault 1}}<span>默认地址</span>{{/equal}}<div class="del-btn" data-id="{{ConsigneeId}}">×</div></dt>--%>
-                            <%--<dd><span>收货人：</span>{{ConsigneeName}}</dd>--%>
-                            <%--<dd><span>所在地区：</span>{{AreaName}}</dd>--%>
-                            <%--<dd><span>地址：</span>{{ConsigneeAddress}}</dd>--%>
-                            <%--<dd><span>手机：</span>{{ConsigneeMobile}}</dd>--%>
-                        <%--</dl>--%>
-                        <%--<div class="btns">{{#equal IsDefault 0}}<a href="javascript:" class="setDefaultConsignee" data-id="{{ConsigneeId}}">设为默认地址</a>{{/equal}}<a class="edit editConsignee" href="javascript:" data-toggle="modal" data-id="{{ConsigneeId}}">编辑</a></div>--%>
-                    <%--</li>--%>
-                    <%--{{/each}}--%>
-                    <%--{{/if}}--%>
-                <%--</script>--%>
             </div>
 
             <!--使用新地址-->
@@ -474,49 +458,6 @@
                             <label class="control-label" for="textarea"><span>*</span>手机号码：</label>
                             <div class="controls"><input type="text" class="input-l" id="NewMobile" name="NewMobile">
                                 <input type="text" class="input-l" id="ConsigneeMobile" name="ConsigneeMobile" hidden="">
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="textarea"><span>*</span>收货地址：</label>
-                            <div class="controls">
-                                <select name="ProviceId" id="SelectProviceId">
-                                    <option value="">选择省份</option>
-                                    <option value="312d0556-0671-4f2e-8bac-7b8873b5a03a">上海</option>
-                                    <option value="98373b1b-201c-4753-b540-14bb1cd6564e">上海(郊区)</option>
-                                    <option value="eabbe02f-59e0-46e6-90e7-cd8a89dbb98f">北京</option>
-                                    <option value="15b6c4e6-69f2-4001-a631-62c0c36102b1">北京(郊区)</option>
-                                    <option value="93570b8c-0a0a-4818-8317-75a0d14093a5">天津</option>
-                                    <option value="de66faa1-cb91-4af7-a6c9-3269f9f9e169">浙江</option>
-                                    <option value="75ff9dce-aba7-4dce-a40d-d70ed77a1d22">江苏</option>
-                                    <option value="da114907-9426-421c-a710-9d319e6a67fd">河北</option>
-                                    <option value="d0f11a9b-602c-498e-ab10-685f4c551d3d">广东</option>
-                                    <option value="69f262ff-cf4f-4920-a10a-7880e27dd440">甘肃</option>
-                                    <option value="ebe771a5-36fb-4116-a98f-7afb5290b334">贵州</option>
-                                    <option value="8253d296-8c94-4935-87f6-8a61cd8a9cf3">河南</option>
-                                    <option value="e615d764-bdd3-4758-913a-59ed8503a5de">广西</option>
-                                    <option value="a6804a4e-e46c-4121-b964-fcf80db3bf74">湖北</option>
-                                    <option value="1b1bd95f-7fd4-4f6e-9e3a-340b1f6c3cc5">海南</option>
-                                    <option value="64c4d7d4-e511-425e-ad09-03defd808faf">湖南</option>
-                                    <option value="1935e31f-5600-48cd-9550-054a0a7c44ce">黑龙江</option>
-                                    <option value="55584cd4-e249-4cd8-9895-462e637e463e">江西</option>
-                                    <option value="7b98f60b-bf6b-414a-a1a4-fec9ef121b5f">吉林</option>
-                                    <option value="a3fd1ee3-6ac7-4161-9393-565fc875aa2b">福建</option>
-                                    <option value="322e0992-f6ea-426d-9794-a5fac5e91adf">辽宁</option>
-                                    <option value="76ba776c-a7df-44f8-8932-4a5a95eef734">宁夏</option>
-                                    <option value="78e4e930-5c94-4cd8-b3b9-1cbc0963efa6">内蒙古</option>
-                                    <option value="8ce3d107-f0d0-42c3-bbcd-a03463fbe1f3">青海</option>
-                                    <option value="09806a8f-dee4-46f6-9682-af8fb426d0e7">四川</option>
-                                    <option value="8dce2e33-92de-4e38-86b8-be3e4165cca9">陕西</option>
-                                    <option value="8ba9f215-379f-451d-893b-0ac3fb6b1f52">山东</option>
-                                    <option value="e1071724-bdbf-4947-becd-64621f189676">山西</option>
-                                    <option value="62024572-439c-46e2-816e-37f52534ef2d">安徽</option>
-                                    <option value="693c737b-d014-4572-8c80-17ecf4bafd98">新疆</option>
-                                    <option value="b9c713c2-aa5f-4aa3-9d26-a3494c95e739">西藏</option>
-                                    <option value="7d975a49-01ff-4a74-accf-e0ef2f5bddac">云南</option>
-                                    <option value="7c046210-81f3-4638-a09b-6b2e8ecbe957">重庆</option>
-                                </select>
-                                <select name="CityId" id="SelectCityId"><option value="">选择城市</option></select>
-                                <select name="DistrictId" id="SelectDistrictId"><option value="">选择区域</option></select>
                             </div>
                         </div>
                         <div class="control-group">
@@ -540,7 +481,8 @@
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="textarea"></label>
-                            <div class="controls"><a href="javascript:" class="btn-save">保存并添加</a></div>
+                            <div class="controls">
+                                <a id="jsPswEdit" class="btn-save" href="javascript:;">保存并添加</a></div>
                         </div>
                     </form>
                 </div>
@@ -734,6 +676,13 @@
         app.referCart();
         app.logout(".logout");
     });
+</script>
+
+<script>
+    document.getElementById('jsPswEdit').addEventListener('click', function(e) {
+        e.preventDefault();
+       alert("添加成功");
+    }, false);
 </script>
 
 <div class="popout Dailog-poput" style="z-index:999999999;display:none;"><div class="popout-wrap">                            <div class="popout-con">            	                <div class="title"><i></i>提 示</div>            	                <div class="con">            		                <p style="text-align: center; font-size: 14px; padding-top: 15px;"></p>                                    <div class="btnbox" style="margin-top: 45px;"><a class="confirm" href="javascript:">确定</a></div>            	                </div>                            </div>                        </div>                        <div class="popout-bg">&nbsp;</div></div><iframe src="address_files/_adw.html" id="emar_box_pv" style="width: 1px; border: 0px; position: absolute; left: -100px; top: -100px; height: 1px;"></iframe></body></html>

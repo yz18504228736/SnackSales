@@ -92,7 +92,7 @@
 .r-payment .selectother{ cursor:pointer; color: #666 !important; text-decoration:none !important;  border:none !important;  }
 .r-payment span{ padding-right:20px !important;}
 
-/*菜谱列表*/
+/*零食列表*/
 .recipe-select ul{ zoom: 1; margin-left:-25px;}
 .recipe-select li{ float:left; height:30px; margin:5px 0 5px 25px; cursor:pointer;}
 .recipe-select li a{ height:30px; font-size:14px; color:#85b100;}

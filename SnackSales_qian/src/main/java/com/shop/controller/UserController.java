@@ -31,14 +31,6 @@ public class UserController {
         return "/user/personInfo";
     }
 
-//    @ResponseBody
-//    @RequestMapping("/userInfo")
-//    public User findUserInfor(HttpServletRequest request ,HttpServletResponse response){
-//        String userName=request.getParameter("userName");
-//        User userInfor=userBiz.findUserByUserName(userName);
-//        return userInfor;
-//    }
-
     //登录
     @RequestMapping("/doLogin")
     public String doLogin(){
@@ -82,7 +74,7 @@ public class UserController {
     @RequestMapping("/update")
     public String update(@RequestParam("img") MultipartFile file, User user){
         String fileName = UUID.randomUUID().toString();
-        File newFile = new File(Constants.FILE_PATH + fileName);
+        File newFile = new File(Constants.FILE_PATH + fileName+".jpg");
         try {
             file.transferTo(newFile);
         } catch (IOException e) {

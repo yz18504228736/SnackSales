@@ -17,6 +17,8 @@
             <p>
                 <label>商品小类：</label>
                 <form:select path="stypeId" id="stype" cssClass="required">
+                    <option value="">请选择</option>
+                    <form:options items="${stypeList}" itemLabel="stypeName" itemValue="stypeId"/>
                 </form:select>
             </p>
             <p>
@@ -77,11 +79,11 @@
                 <form:input path="sizes"></form:input>
             </p>
             <p>
-                <label for="sizes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label for="sizes">商品展示操作</label>
                 <form:input path="sizes"></form:input>
             </p>
             <p>
-                <label for="sizes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label for="sizes">商品详情操作</label>
                 <form:input path="sizes"></form:input>
             </p>
         </div>

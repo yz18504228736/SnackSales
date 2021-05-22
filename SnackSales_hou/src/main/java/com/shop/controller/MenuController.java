@@ -93,7 +93,7 @@ public class MenuController {
         try {
             MultipartFile file = request.getFile("file");
             String fileName = UUID.randomUUID().toString();
-            File newFile = new File(Constants.FILE_PATH+ fileName);
+            File newFile = new File(Constants.FILE_PATH+ fileName+".jpg");
             file.transferTo(newFile);
             menu.setMenuImg(fileName);
             menuBiz.save(menu);
@@ -112,7 +112,7 @@ public class MenuController {
             MultipartFile file = request.getFile("file");
             if(file.getSize() !=0){
                 String fileName = UUID.randomUUID().toString();
-                File newFile = new File(Constants.FILE_PATH+ fileName);
+                File newFile = new File(Constants.FILE_PATH+ fileName+".jpg");
                 file.transferTo(newFile);
                 menu.setMenuImg(fileName);
             }

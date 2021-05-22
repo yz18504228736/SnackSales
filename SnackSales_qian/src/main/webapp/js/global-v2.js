@@ -420,7 +420,7 @@ G.app.cart.module = (function () {
             });
         },
         //收藏
-        addToFavor: function (a, type) {//收藏类别1.商品收藏2.视频收藏4.菜谱8.养生文章,默认=1
+        addToFavor: function (a, type) {//收藏类别1.商品收藏2.视频收藏4.零食8.养生文章,默认=1
             $.getJSON(G.logic.constants.urlAjaxHandle + "?datestamp=" + new Date().getTime() + "&callback=?", {
                 operate: "AddCollection",
                 CommodityId: a,

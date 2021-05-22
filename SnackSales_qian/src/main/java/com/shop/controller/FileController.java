@@ -22,10 +22,10 @@ public class FileController {
 
     @RequestMapping("/download/{fileName}")
     public void download(@PathVariable String fileName,HttpServletResponse response) throws BusinessException {
-        File file = new File(Constants.FILE_PATH + fileName);
+        File file = new File(Constants.FILE_PATH + fileName+".jpg");
         if (file.exists()) {
             try {
-                response.setHeader("Content-Disposition", "attachment;filename="+fileName);
+                response.setHeader("Content-Disposition", "attachment;filename="+fileName+".jpg");
                 FileInputStream fis = new FileInputStream(file);
                 OutputStream os = response.getOutputStream();
                 byte[] b = new byte[1024];
@@ -45,7 +45,7 @@ public class FileController {
 
     @RequestMapping("/shows/{name}")
     public void show(@PathVariable("name") String name,HttpServletResponse response) {
-        File file = new File(Constants.FILE_PATH + name);
+        File file = new File(Constants.FILE_PATH + name+".jpg");
         if (file.exists()) {
             try {
 //				response.setHeader("Content-Disposition", "attachment;filename="+name);

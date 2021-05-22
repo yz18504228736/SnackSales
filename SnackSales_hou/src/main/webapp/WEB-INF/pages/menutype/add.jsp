@@ -8,7 +8,7 @@
                 onsubmit="return iframeCallback(this, navTabAjaxDone);">
         <div class="pageFormContent" layoutH="56">
             <p>
-                <label>菜谱类别名称：</label>
+                <label>零食类别名称：</label>
                 <input name="menuTypeName" class="required" type="text" size="30" />
             </p>
 

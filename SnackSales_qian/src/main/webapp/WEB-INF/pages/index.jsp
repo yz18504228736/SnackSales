@@ -481,7 +481,7 @@
             <li>
                 <a href="menu/list1/" target="_blank">
                     <img src="images/9288709403714262.jpg" width="290">
-                    <p><b>菜谱专栏</b>大厨私房菜 餐桌新食尚</p>
+                    <p><b>零食专栏</b>大厨零食 零食制作新食尚</p>
                 </a>
             </li>
         </ul>

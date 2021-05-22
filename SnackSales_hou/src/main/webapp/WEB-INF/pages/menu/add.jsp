@@ -8,23 +8,23 @@
                enctype="multipart/form-data" onsubmit="return iframeCallback(this, navTabAjaxDone);">
         <div class="pageFormContent" layoutH="56">
             <p>
-                <label>菜谱类别：</label>
+                <label>零食类别：</label>
                 <form:select path="menutype.menuTypeId" id="menutype" cssClass="required">
                     <option value="">请选择</option>
                     <form:options items="${list}" itemLabel="menuTypeName" itemValue="menuTypeId"/>
                 </form:select>
             </p>
             <p>
-                <label>菜谱描述：</label>
+                <label>零食描述：</label>
                 <input name="menuDesc" class="required" type="text" size="30" />
             </p>
             <p>
-                <label>菜谱名字：</label>
+                <label>零食名字：</label>
                 <input name="menuName" class="required" type="text" size="30" />
             </p>
 
             <p>
-                <label>菜谱图片：</label>
+                <label>零食图片：</label>
                 <input name="file" type="file" class="required" onchange="selImage(this)"/>
             </p>
             <p style="height:200px;">
@@ -32,7 +32,7 @@
             </p>
 
             <p>
-                <label>菜谱步骤：</label>
+                <label>零食步骤：</label>
                 <textarea name="menuContent" class="editor" rows="15" cols="80" ></textarea>
             </p>
 

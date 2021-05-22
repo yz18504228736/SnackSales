@@ -53,7 +53,7 @@ public class ProDetailController {
                         String fileName = UUID.randomUUID().toString();
                         proDetail.setProDetailImg(fileName);
                         proDetailBiz.save(proDetail);
-                        File newFile = new File(Constants.FILE_PATH + fileName);
+                        File newFile = new File(Constants.FILE_PATH + fileName +".jpg");
                         try {
                             file.transferTo(newFile);
                         } catch (IOException e) {
@@ -96,7 +96,7 @@ public class ProDetailController {
             proDetail.setProDetailImg(fileName);
             int row = proDetailBiz.update(proDetail);
             System.out.println(row);
-            File newFile = new File(Constants.FILE_PATH + fileName);
+            File newFile = new File(Constants.FILE_PATH + fileName+".jpg");
             try {
                 file.transferTo(newFile);
             } catch (IOException e) {

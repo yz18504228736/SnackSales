@@ -94,7 +94,7 @@ $(function(){
 	<div id="layout">
 		<div id="header">
 			<div class="headerNav">
-				<img src="img/logo.ico" /><h1>零食在售后台管理系统</h1>
+				<h1>零食在售后台管理系统</h1>
 				<ul class="nav">
 					<li><a href="javascript:void(0)">欢迎您，${manName}</a></li>
 					<li><a href="../mangener/login">退出</a></li>
@@ -162,7 +162,6 @@ $(function(){
 							<li><a href="javascript:void(0);" >销售统计</a>
 								<ul>
 									<li><a href="../data/showData" target="navTab" rel="main">商品销售排行</a></li>
-									<li><a href="../charts/index" target="navTab" rel="main">图表分析</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0);" >管理员信息管理</a>
@@ -215,115 +214,4 @@ $(function(){
     var TextArea1 = CKEDITOR.replace('TextArea1');
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>首页</title>
-
-		<link rel="icon" href="img/logo.ico" />
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-	</head>
-	<body onload="fn()">
-		<div id="content">
-			<div id="top">
-				<img src="img/logo.ico" />
-				<span>XX学生信息管理系统</span>
-			</div>
-			<div id="left">
-				<ul>
-					<li><a href="Student.do" target="contentFrame">学生信息管理</a></li>
-					<li><a href="Classes.do" target="contentFrame">班级信息管理</a></li>
-					<li><a href="#">学生成绩管理</a></li>
-					<li><a href="#">学生课程管理</a></li>
-				</ul>
-			</div>
-			<div id="center">
-				<iframe name="contentFrame" src="Student.do" width="100%" height="99%"></iframe>
-			</div>
-		</div>
-	</body>
-	<script type="text/javascript">
-		function fn(){
-			document.getElementById("content").style.height = window.innerHeight + "px";
-		}
-	</script>
-</html--%>
 

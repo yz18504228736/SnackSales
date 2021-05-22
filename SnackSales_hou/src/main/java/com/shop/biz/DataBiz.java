@@ -31,10 +31,8 @@ public List<Data> findAll(){
     Data data=new Data();
         Product product=new Product();
         product= productBiz.findByProName(s.getProName());
-//        System.out.println(product);
        data.setProName(s.getProName());
        data.setSellNum(s.getProNum());
-//        System.out.println(product.getStype());
        data.setsTypeName(product.getStype().getStypeName());
        data.setbTypeName(product.getStype().getBtype().getBtypeName());
        dataList.add(data);

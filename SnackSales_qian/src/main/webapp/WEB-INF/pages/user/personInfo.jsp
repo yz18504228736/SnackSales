@@ -412,7 +412,7 @@
                     <li><a href="http://www.yiguo.com/activity/sale/3200" target="_blank">新品专区</a></li>
                     <li><a href="http://www.yiguo.com/activity/sale/3203" target="_blank">优质生活</a></li>
                     <li><a href="http://www.yiguo.com/activity/bankactivity" target="_blank">银行专区</a></li>
-                    <li><a href="http://article.yiguo.com/" target="_blank">菜谱专栏</a></li>
+                    <li><a href="http://article.yiguo.com/" target="_blank">零食专栏</a></li>
                 </ul>
             </div>
         </div>
